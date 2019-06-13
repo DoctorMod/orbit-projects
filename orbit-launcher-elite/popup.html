@@ -1,0 +1,144 @@
+<html>
+
+<head>
+  <title>Orbit Newtab Popup</title>
+  <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+  <link rel="stylesheet" href="orbit-elite/other/fontawesome/css/all.css">
+  <style>
+    /* Modal Structure */
+
+    html,
+    body {
+      font-family: 'Concert One', cursive;
+      font-size: 14px;
+      margin: 0;
+      min-height: 120px;
+      padding: 0;
+      width: 325px;
+    }
+
+    @font-face {
+      font-family: ConcertOne;
+      src: url("orbit-elite/other/ConcertOne.ttf");
+    }
+
+    h1 {
+      font-family: 'Concert One', cursive;
+      font-size: 22px;
+      font-weight: 400;
+      margin: 0;
+      color: #1976D2;
+    }
+
+    a:link,
+    a:visited {
+      color: #1976D2;
+      outline: none;
+      text-decoration: none;
+    }
+
+    img {
+      width: 30px;
+    }
+
+    .modal-header {
+      align-items: center;
+    }
+
+    .modal-content {
+      color: #1976D2;
+    }
+
+    .modal-icons {
+      height: 50px;
+      width: 100%;
+    }
+
+
+    .logo {
+      padding: 16px;
+    }
+
+    .logo-icon {
+      vertical-align: text-bottom;
+      margin-right: 12px;
+      position: relative;
+      top: 3px;
+      transition-duration: 300ms;
+      font-size: 30px;
+    }
+
+    .logo-icon:hover {
+      transform: scale(1.05);
+    }
+
+    .version {
+      color: #444;
+      font-size: 18px;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 22px;
+    }
+
+    .flex {
+      opacity: 1;
+      transition: opacity 0.1s ease-in-out;
+      width: 120px;
+      transition-duration: 300ms;
+    }
+
+    .flex:hover {
+      opacity: 0.4;
+    }
+
+    .flex .fa {
+      font-size: 40px;
+      color: #1976D2;
+    }
+
+    .btn {
+      font-size: 30px;
+      transition-duration: 300ms;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+  </style>
+  <link id="dark" rel="stylesheet">
+</head>
+
+<body class="backgroundCol">
+  <div class="modal-header">
+    <h1 class="logo accentCol">
+      <span><i class="logo-icon fas fa-globe-americas" id="logoIcon"></i>Orbit Newtab</span>
+      <span id="version" class="version accentCol"></span>
+    </h1>
+  </div>
+  <div class="modal-icons">
+    <div class="flex-container">
+      <a class="btn backgroundCol" id="dial1p" target="_blank">
+        <i id="dial1"></i>
+      </a>
+      <a class="btn backgroundCol" id="dial2p" target="_blank">
+        <i id="dial2"></i>
+      </a>
+      <a class="btn backgroundCol" id="dial3p" target="_blank">
+        <i id="dial3"></i>
+      </a>
+      <a class="btn backgroundCol" id="dial4p" target="_blank">
+        <i id="dial4"></i>
+      </a>
+      <a class="btn backgroundCol" id="dial5p" target="_blank">
+        <i id="dial5"></i>
+      </a>
+      </a>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>

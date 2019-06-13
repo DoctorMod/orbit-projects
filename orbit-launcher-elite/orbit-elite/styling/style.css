@@ -1,0 +1,965 @@
+body, html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#settingsOpen {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  outline: none;
+  font-size: 30px;
+  transition-duration: 300ms;
+}
+
+/* Global CSS */
+a {
+  text-decoration: none;
+}
+
+h1 {
+  position: relative;
+  font-size: 50px;
+  top: 200px
+}
+
+h2 {
+  font-size: 100px;
+}
+
+h3 {
+  font-size: 15px;
+}
+
+h4 {
+  font-size: 25px;
+}
+
+h5 {
+  font-size: 30px;
+}
+
+h6 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 20px;
+}
+
+label {
+  position: relative;
+  top: -7.5px;
+}
+
+div {
+  font-size: 15px;
+  text-align: center;
+}
+
+input, body {
+  font-family: 'Concert One', sans-serif;
+}
+
+/* Checkbox CSS */
+input[type="checkbox"] {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  /*margin-top: -20px;*/
+  -webkit-appearance: none;
+  background: #F5B7B1;
+  outline: none;
+  border-radius: 20px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+  transition: .5s;
+}
+
+input:checked[type="checkbox"] {
+  background: #82E0AA;
+}
+
+input[type="checkbox"]:before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+  transition: .5s;
+}
+
+input:checked[type="checkbox"]:before {
+  left: 20px;
+}
+
+/* End Of Checkbox CSS */
+/* Color CSS */
+input[type="color"] {
+  -webkit-appearance: none;
+  border: solid 2px #FFFFFF;
+  background: none;
+  border-radius: 100%;
+  width: 32px;
+  height: 32px;
+  outline: none;
+  position: relative;
+  top: 8px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 100%;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 100%;
+}
+
+.sliderValue {
+  position: relative;
+  bottom: 7.5px;
+}
+
+.sliderRange {
+  -webkit-appearance: none;
+  width: 80%;
+  height: 25px;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border-radius: 20px;
+}
+
+.sliderRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border-radius: 100%;
+  border: 3px solid #fff;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+}
+
+.noTop {
+  top: 0px;
+}
+
+.rippleJS {
+  cursor: pointer;
+}
+
+/* End Of Color CSS */
+/* Other Global CSS */
+#bg {
+  /* Add the blur effect */
+  /* Full height */
+  height: 110%;
+  position: absolute;
+  width: 110%;
+  top: -5%;
+  left: -5%;
+  box-sizing: border-box;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.accentCol {
+  color: #1976D2;
+}
+
+.backgroundCol {
+  background-color: #FFFFFF;
+}
+
+.sideAccent {
+  color: #FFFFFF;
+}
+
+.sideBackground {
+  background-color: #1976D2;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -75%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* End Of Other Global CSS */
+/* End Of Global CSS */
+/*Nav Box CSS*/
+.modal {
+  text-align: center;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  border: 1px solid #888;
+  width: 750px;
+  height: 500px;
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: drop 1s ease;
+}
+
+#modalInstallLogo {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+}
+
+#modalClose {
+  position: relative;
+  top: 5px;
+  right: 10px;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#modalClose:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#mTitle {
+  font-size: 50px;
+}
+
+#mContent {
+  font-size: 30px;
+}
+
+/*End of Nav CSS*/
+/* Side Tool Open CSS */
+#todoOpen {
+  position: fixed;
+  top: 10px !important;
+  right: 10px !important;
+  font-size: 20px;
+  outline: none;
+  transition-duration: 300ms;
+  color: #1976D2;
+  border: solid 0px;
+  border-radius: 15px;
+  padding: 5px 5px;
+  text-decoration: inherit;
+  opacity: 1;
+  transition: all ease 0.8s;
+  cursor: pointer;
+}
+
+#rssOpen {
+  position: fixed;
+  top: 40px;
+  right: 10px;
+  font-size: 20px;
+  outline: none;
+  transition-duration: 300ms;
+  color: #1976D2;
+  border: solid 0px;
+  border-radius: 15px;
+  padding: 5px 5px;
+  text-decoration: inherit;
+  opacity: 1;
+  transition: all ease 0.8s;
+  cursor: pointer;
+}
+
+#weatherOpen {
+  position: fixed;
+  top: 73px;
+  right: 10px;
+  font-size: 20px;
+  outline: none;
+  transition-duration: 300ms;
+  color: #1976D2;
+  border: solid 0px;
+  border-radius: 15px;
+  padding: 5px 5px;
+  text-decoration: inherit;
+  opacity: 1;
+  transition: all ease 0.8s;
+  cursor: pointer;
+}
+
+/* End of Side Tool Open CSS */
+/* Clock & Date CSS */
+.clock {
+  position: relative;
+  top: 150px;
+  font-size: 60px;
+  letter-spacing: 7px;
+  cursor: pointer;
+  transition: all ease 0.8s;
+}
+
+.Date {
+  position: relative;
+  top: 150px;
+  font-size: 20px;
+  letter-spacing: 5px;
+  cursor: default;
+  transition: all ease 0.8s;
+}
+
+/* End Of Clock & Date CSS */
+/* Search Input CSS*/
+.omnibox {
+  font-weight: 50;
+  font-size: 28px;
+  outline: none;
+  width: 600px;
+  border: solid 2px #1976D2;
+  background-color: #FFFFFF00;
+  border-radius: 30px;
+  padding: 5px 40px;
+  transition-duration: 300ms;
+  text-decoration: inherit;
+  opacity: 1;
+  transition: all ease 0.8s;
+  text-align: center;
+  position: relative;
+  top: 190px;
+}
+
+.omnibox:hover {
+  transform: scale(1.1);
+}
+
+.submit {
+  outline: none;
+  background: none;
+  border: none;
+  font-size: 40px;
+  transition-duration: 300ms;
+  transition: all ease 0.8s;
+  text-align: center;
+  position: absolute;
+  top: 180px;
+  left: 35px;
+  -webkit-animation: continuasRotation 60s infinite linear;
+}
+
+.submit:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* End of Search Input CSS */
+/* Media Button CSS */
+.middle {
+  text-align: center;
+  position: relative;
+  top: 200px;
+}
+
+.btn {
+  display: none;
+  width: 90px;
+  height: 90px;
+  margin: 10px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+.btn i, .btn span {
+  line-height: 90px;
+  font-size: 26px;
+  transition: 0.2s;
+  animation: font-size-decrease 0.25s;
+}
+
+.btn:hover i, .btn:hover span {
+  animation: font-size-increase 0.25s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes font-size-increase {
+  0% {
+    font-size: 26px;
+  }
+
+  100% {
+    font-size: 33.6px;
+  }
+}
+
+@keyframes font-size-decrease {
+  0% {
+    font-size: 33.6px;
+  }
+
+  100% {
+    font-size: 26px;
+  }
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 120%;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+@keyframes aaa {
+  0% {
+    left: -110%;
+    top: 90%;
+  }
+
+  50% {
+    left: 10%;
+    top: -30%;
+  }
+
+  100% {
+    top: -10%;
+    left: -10%;
+  }
+}
+
+/* End Of Media Button CSS */
+.MiscText {
+  position: absolute;
+  font-size: 30px !important;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -90%)
+}
+
+/* Todo CSS */
+.sideWays {
+  animation: rotate 0.22s;
+  /*animation: transform 0.25s;*/
+  animation-fill-mode: forwards;
+}
+
+.sideWaysClose {
+  text-decoration: inherit;
+  animation: unRotate 0.22s;
+  /*animation: unTransform 0.25s;*/
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes unRotate {
+  0% {
+    transform: rotate(90deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.Todo {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #1976D2;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.2s;
+}
+
+.Todo h4 {
+  font-size: 20px;
+}
+
+#box, #addItem {
+  border-radius: 4px !important;
+}
+
+#list h4 {
+  text-align: left;
+  float: left;
+  clear: both;
+  margin-left: 20px;
+}
+
+#list h4.finished::before {
+  content: '✓';
+}
+
+#list h4.finished {
+  text-decoration: line-through;
+}
+
+#list h4 span {
+  content: "x";
+  position: absolute;
+  right: 0;
+  margin-top: -12px;
+  padding: 12px 16px 12px 16px;
+  border-radius: 4px;
+  transition-duration: 300ms;
+}
+
+#list h4 span:hover {
+  background-color: red;
+  color: white;
+}
+
+#list h4:hover {
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.Todo a {
+  text-decoration: none;
+  transition-duration: 300ms;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.Todo .closebtn {
+  position: absolute;
+  top: 0px;
+  right: 9px;
+  outline: none;
+  transition-duration: 300ms;
+  font-size: 35px;
+  color: white;
+}
+
+#box {
+  color: #1976D2;
+  font-weight: 50;
+  font-size: 15px;
+  text-align: center;
+  width: 150px;
+  border: solid 0px;
+  border-radius: 30px;
+  padding: 5px 40px;
+  transition-duration: 300ms;
+  text-decoration: inherit;
+  opacity: 1;
+  transition: all ease 0.8s;
+  margin-top: 2.5%;
+  outline: none;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+}
+
+#box:hover {
+  transform: scale(1.05);
+}
+
+#addItem {
+  color: #1976D2;
+  background-color: white;
+  font-weight: 50;
+  font-size: 15px;
+  text-align: center;
+  width: 150px;
+  border: solid 0px;
+  border-radius: 30px;
+  padding: 5px 40px;
+  transition-duration: 300ms;
+  text-decoration: inherit;
+  opacity: 1;
+  transition: all ease 0.8s;
+  margin-top: 5%;
+  outline: none;
+}
+
+#addItem:hover {
+  transform: scale(1.05);
+}
+
+/* End Of Todo CSS */
+/* RSS CSS */
+.RSS {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #1976D2;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.2s;
+}
+
+.RSS .closebtn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  outline: none;
+  transition-duration: 300ms;
+  font-size: 35px;
+  color: white;
+}
+
+#rssURL {
+  width: 90%;
+}
+
+/* End Of RSS CSS */
+/* Weather CSS */
+.Weather {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #1976D2;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.2s;
+}
+
+.Weather .closebtn {
+  position: absolute;
+  top: 0px;
+  right: 9px;
+  outline: none;
+  transition-duration: 300ms;
+  font-size: 35px;
+  color: white;
+}
+
+#loading {
+  -webkit-animation: continuasRotation 2s infinite linear;
+  font-size: 80px;
+}
+
+@-webkit-keyframes continuasRotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+/* End Of Weather CSS */
+/* Settings CSS */
+.Sett {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.2s;
+}
+
+.Sett a {
+  text-decoration: none;
+  transition-duration: 300ms;
+  text-align: center;
+  position: relative;
+}
+
+.Sett .closebtn {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  font-size: 35px;
+}
+
+.SettingsSection {
+  display: none;
+}
+
+.SettingsSection h4 {
+  margin: 0;
+  padding: 33.250 inherit;
+}
+
+.sideSettings {
+  position: absolute;
+  top: 27%;
+  left: 5%;
+  transform: translate(-5%, -27%);
+  width: 200px;
+  height: 82%;
+  z-index: -1;
+  border-radius: 5px;
+}
+
+#orbitSettingsLogo {
+  border-radius: 100%;
+  border: 1px solid black;
+  width: 75px;
+  height: 75px;
+}
+
+.settingsMain {
+  width: 75%;
+  height: 82%;
+  border-radius: 5px;
+  position: absolute;
+  top: 27%;
+  left: 90%;
+  overflow: scroll;
+  transform: translate(-90%, -27%);
+}
+
+.settingsMain h4 {
+  margin-bottom: 0;
+}
+
+.rippleJS.color {
+  top: -8;
+  border-radius: 100%;
+  width: 32px;
+  height: 32px;
+}
+
+.rippleJS.checkbox {
+  top: -8;
+  width: 40px;
+  height: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+.button {
+  color: #1976D2;
+  background-color: white;
+  font-weight: 50;
+  font-size: 15px;
+  text-align: center;
+  width: auto;
+  border: solid 0px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition-duration: 300ms;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
+  text-decoration: inherit;
+  opacity: 1;
+  transition: all ease 0.8s;
+  outline: none;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.colorInput {
+  width: 75px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  text-transform: uppercase;
+}
+
+#getval {
+  text-align: center;
+}
+
+.enterFile label {
+  border-radius: 4px;
+  padding: 7.5px 10px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
+}
+
+.enterFile input[type="file"] {
+  display: none;
+}
+
+.textButton {
+  box-shadow: none;
+}
+
+.sliderValue {
+  position: relative;
+  bottom: 7.5px;
+}
+
+.sliderRange {
+  -webkit-appearance: none;
+  width: 80%;
+  height: 25px;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border-radius: 20px;
+}
+
+.sliderRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border-radius: 100%;
+  border: 3px solid #fff;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transition-duration: 100ms;
+  border: none;
+}
+
+.sliderRange::-webkit-slider-thumb:active {
+  width: 30px;
+  height: 30px;
+}
+
+/*Widgets*/
+.Widgets {
+  margin: 0 5;
+}
+
+.widgetButton {
+  width: 60px;
+  margin-left: 2px;
+  font-size: 35px;
+  float: left;
+}
+
+/*End Of Widgets*/
+.settingsBottomSheet {
+  position: sticky;
+  width: 74.6%;
+  padding: 3px;
+  position: absolute;
+  top: 86.3%;
+  left: 90%;
+  transform: translate(-90%, -86.3%);
+  background-color: #000000aa;
+  border-radius: 20px 20px 1px 5px;
+}
+
+#settingsHeader {
+  font-size: 50px;
+  position: relative;
+  top: -25px;
+}
+
+#DoneClose, #CancelClose {
+  padding: 5px 30px;
+  border-radius: 30px;
+}
+
+#reset {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+}
+
+#submitSettings {
+  color: #1976D2;
+  background-color: white;
+  font-weight: 50;
+  font-size: 15px;
+  text-align: center;
+  width: auto;
+  border: solid 0px;
+  border-radius: 30px;
+  padding: 5px 40px;
+  transition-duration: 300ms;
+  text-decoration: inherit;
+  opacity: 1;
+  transition: all ease 0.8s;
+  outline: none;
+}
+
+#settingsClose {
+  color: white;
+  top: 0px;
+}
+
+#reloadButton {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  outline: none;
+  font-size: 20px;
+  transition-duration: 300ms;
+}
+
+#reloadButton:hover {
+  animation: continuasRotation 1s;
+}
+
+/*.hoverRotate:hover {
+  animation: continuasRotation 1.2s;
+}
+*/
+.closeLabel {
+  font-size: 10px;
+  position: absolute;
+  top: 30px;
+  left: 10px;
+}
+
+/* End of Settings CSS */
