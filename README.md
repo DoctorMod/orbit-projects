@@ -48,6 +48,6 @@ Help Center & Suggestions https://discord.gg/FBhf34M
 
 [Ventus (CEO & Co-Developer)](http://benmasel.github.io/)
 
-[Doctor_Mod (Co-Developer)](https://doctormod.sytes.net/)
+[Doctor_Mod (COO & Co-Developer)](https://doctormod.sytes.net/)
 
 HyperBean (Graphic Designer & Social Manager)
