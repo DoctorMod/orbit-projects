@@ -1,5 +1,4 @@
 <html>
-
 <head>
   <title>Orbit</title>
   <meta charset="utf-8">
@@ -9,10 +8,8 @@
   <link href="https://fonts.googleapis.com/css?family=Concert+One|Fredoka+One|Indie+Flower|Josefin+Sans|Open+Sans|PT+Serif|Poppins|Raleway" rel="stylesheet">
   <link rel="stylesheet" href="other/fontawesome/css/all.css">
 </head>
-
 <body class="backgroundCol" id="body">
-  <div id="bg">
-  </div>
+  <div id="bg"></div>
   <div class="content">
     <a class="fas fa-bars accentCol" id="todoOpen"></a>
     <a class="fas fa-rss accentCol" id="rssOpen"></a>
@@ -83,7 +80,6 @@
       <br />
       <div id="list" class="sideAccent"></div>
     </div>
-
     <div id="weatherSideTool" class="Weather sideBackground">
       <a href="javascript:void(0)" class="closebtn sideAccent hoverRotate" id="weatherClose">&times;</a>
       <div class="sideAccent" style="font-size:10px;position:absolute;top:30px;right:10px;">Close</div>
@@ -98,16 +94,13 @@
     </div>
 
     <div class="Sett sideBackground" id="Settings">
-      <a href="javascript:void(0)" class="closebtn sideAccent hoverRotate" id="settingsClose">&times;</a>
-      <div class="sideAccent" style="font-size:10px;position:absolute;top:30px;left:10px;">Close</div>
       <div class="sideSettings backgroundCol">
-        <br>
-        <br>
-        <h4 class="accentCol SettingsSelection" id="OpenvisualSettings">Visual</h4>
-        <h4 class="accentCol SettingsSelection" id="OpencontentSettings">Content</h4>
-        <h4 class="accentCol SettingsSelection" id="OpenspeedDialSettings">Speed Dials</h4>
-        <h4 class="accentCol SettingsSelection" id="OpenWidgetsettings">Widgets</h4>
-        <h4 class="accentCol SettingsSelection" id="OpenotherSettings">Other</h4>
+        <h4 class="accentCol">Orbit Newtab</h4>
+        <h4 class="accentCol SettingsSelection" id="OpenvisualSettings"><i class="fas fa-palette sideIcon"></i> Visual</h4>
+        <h4 class="accentCol SettingsSelection" id="OpencontentSettings"><i class="fas fa-image sideIcon"></i> Content</h4>
+        <h4 class="accentCol SettingsSelection" id="OpenspeedDialSettings"><i class="fas fa-circle sideIcon"></i> Speed Dials</h4>
+        <h4 class="accentCol SettingsSelection" id="OpenWidgetsettings"> <i class="fas fa-puzzle-piece sideIcon"></i> Widgets</h4>
+        <h4 class="accentCol SettingsSelection" id="OpenotherSettings"> <i class="fas fa-ellipsis-h sideIcon"></i> Other</h4>
         <div class="Widgets">
           <a class="instagram widgetButton" href="https://www.instagram.com/orbitelite.official/" target="_blank"><i class="accentCol fab fa-instagram"></i>
             <h3 class="accentCol instagramText">Social</h3>
@@ -124,166 +117,226 @@
         <h4 class="accentCol" id="settingsHeader">Settings</h4>
         <div class="SettingsSection" id="visualSettings">
           <h4 class="accentCol">Background Options</h4>
-
-          <h3 class="accentCol">Background Color</h3>
-          <label><input type="color" id="background" class="borderless" value="#FFFFFF"></input>
-            <link class="rippleJS fill color"></label>
-          <label class="NoTop"><input type="text" class="colorInput sideAccent sideBackground" id="backgroundBox" spellcheck="false" maxlength="7"></input></label>
-          <h3 class="accentCol">Accent Color</h3>
-          <label class="NoTop"><input type="color" id="accent" value="#1976D2"></input>
-            <link class="rippleJS fill color"></label>
-          <label class="NoTop"><input type="text" class="colorInput sideAccent sideBackground" id="accentBox" spellcheck="false" maxlength="7"></input></label>
-          <br>
-          <br>
-
-          <h3 class="accentCol">Background Image</h3>
-          <br>
-          <div class="enterFile accentCol">
-            <label id="bb" class="sideAccent sideBackground"><span id="EnterName">Change The Background</span>
-              <input type="file" id='getval' class="accentCol" multiple />
-              <link class="rippleJS fill"></label>
-            </label>
+          <div class="row">
+            <div class="column">
+              <h3 class="accentCol">Background Color</h3>
+              <label><input type="color" id="background" class="borderless" value="#FFFFFF"></input>
+                <link class="rippleJS fill color"></label>
+              <label class="NoTop"><input type="text" class="colorInput sideAccent sideBackground" id="backgroundBox" spellcheck="false" maxlength="7"></input></label>
+            </div>
+            <div class="column">
+              <h3 class="accentCol">Text Color</h3>
+              <label class="NoTop"><input type="color" id="accent" value="#1976D2"></input>
+                <link class="rippleJS fill color"></label>
+              <label class="NoTop"><input type="text" class="colorInput sideAccent sideBackground" id="accentBox" spellcheck="false" maxlength="7"></input></label>
+            </div>
+            <div class="column">
+              <h3 class="accentCol">Background Image</h3>
+              <br>
+              <div class="enterFile accentCol">
+                <label id="bb" class="sideAccent sideBackground"><span id="EnterName">Change The Background</span>
+                  <input type="file" id='getval' class="accentCol" multiple />
+                  <link class="rippleJS fill"></label>
+                </label>
+              </div>
+              <input class="accentCol backgroundCol button textButton" id="resetbk" type="button" value="Reset Background">
+            </div>
           </div>
-          <input class="accentCol backgroundCol button textButton" id="resetbk" type="button" value="Reset Background">
-          <br />
-          <br />
-
-          <h3 class="accentCol">Slide Length (Minutes)</h3>
-          <a id="SlideLengthReadMore" href="#" class="accentCol">Read More</a>
-          <br />
-          <div class="Slider">
-            <input class="sliderRange sideBackground" id="timerRange" type="range" min="1" max="5" value="1">
-            <span class="sliderValue accentCol" id="timerSliderValue">0</span>
+          <div class="row">
+            <div class="column">
+              <h3 class="accentCol">Slide Length (Minutes)</h3>
+              <a id="SlideLengthReadMore" href="#" class="accentCol">Read More</a>
+              <div class="Slider">
+                <input class="sliderRange sideBackground" id="timerRange" type="range" min="1" max="5" value="1">
+                <span class="sliderValue accentCol" id="timerSliderValue">0</span>
+              </div>
+            </div>
+            <div class="column">
+              <h3 class="accentCol">Background Blur Intensity</h3>
+              <div class="Slider">
+                <input class="sliderRange sideBackground" id="blurRange" type="range" min="0" max="20" value="0">
+                <span class="sliderValue accentCol" id="BlurSliderValue">0</span>
+              </div>
+            </div>
+            <div class="column">
+              <h3 class="accentCol">Font</h3>
+              <div id="Fonts">
+                <select id="FontSelections" class="button sideBackground sideAccent">
+                  <option style="font-family:Concert One;" value="Concert One">Concert One</option>
+                  <option style="font-family:Fredoka One;" value="Fredoka One">Fredoka One</option>
+                  <option style="font-family:Indie Flower;" value="Indie Flower">Indie Flower</option>
+                  <option style="font-family:PT Serif;" value="PT Serif">PT Serif</option>
+                  <option style="font-family:Poppins;" value="Poppins">Poppins</option>
+                  <option style="font-family:Raleway;" value="Raleway">Raleway</option>
+                  <option style="font-family:Open Sans;" value="Open Sans">Open Sans</option>
+                  <option style="font-family:sans-serif;" value="sans-serif">Sans Serif</option>
+                </select>
+              </div>
+            </div>
           </div>
+          <div class="row">
+            <div class="column">
+              <h3 class="accentCol">Content Background Opacity</h3>
+              <div class="Slider">
+                <input class="sliderRange sideBackground" id="OpacitySliderRange" type="range" min="0" max="100" value="100">
+                <span class="sliderValue accentCol" id="OpacitySliderValue">0</span>
+              </div>
+            </div>
+            <div class="column">
 
-          <h3 class="accentCol">Blur Intensity</h3>
-          <div class="Slider">
-            <input class="sliderRange sideBackground" id="blurRange" type="range" min="0" max="20" value="0">
-            <span class="sliderValue accentCol" id="BlurSliderValue">0</span>
+            </div>
+            <div class="column">
+
+            </div>
           </div>
-          <br />
-          <br />
-          <br />
         </div>
         <div class="SettingsSection" id="contentSettings">
           <h4 class="accentCol">Disable Content</h4>
+          <div class="row">
+            <div class="column">
+              <h3 class="accentCol">Clock On/Off</h3>
+              <h4 class="accentCol"><i class="fas fa-clock"></i></h4>
+              <div class="accentCol" id="clockContent">
+                <label class="accentCol">Off</label>
+                <label class="NoTop"><input type="checkbox" checked class="sideBackground" id="clockCheck">
+                <label class="accentCol">On</label>
+              </div>
+            </div>
+            <div class="column">
+              <h3 class="accentCol">Date Off/On</h3>
+              <h4 class="accentCol"><i class="fas fa-calendar-day"></i></h4>
+              <div id="dateMode">
+                <label class="accentCol">Off</label>
+                <label class="NoTop"><input type="checkbox" class="sideBackground" id="displaydate">
+                <label class="accentCol">On</label>
+              </div>
+            </div>
+            <div class="column">
+              <h3 class="accentCol">Search Bar On/Off</h3>
+              <h4 class="accentCol"><i class="fas fa-search"></i></h4>
+              <div class="accentCol" id="searchContent">
+                <label class="accentCol">Off</label>
+                <label class="NoTop"><input type="checkbox" checked class="sideBackground" id="searchCheck">
+                <label class="accentCol">On</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+              <h3 class="accentCol">Submit Button On/Off</h3>
+              <h4 class="accentCol"><i class="fas fa-globe-americas"></i></h4>
+              <div id="submitOptions">
+                <label class="accentCol">Off</label>
+                <label class="NoTop"><input type="checkbox" class="sideBackground" id="submitToggle" checked>
+                <label class="accentCol">On</label>
+              </div>
+            </div>
+            <div class="column">
+              <h3 class="accentCol">Speed Dials On/Off</h3>
+              <h4 class="accentCol"><i class="fas fa-circle"></i></h4>
+              <div class="accentCol" id="dialContent">
+                <label class="accentCol">Off</label>
+                <label class="NoTop"><input type="checkbox" checked class="sideBackground" id="dialCheck">
+                <label class="accentCol">On</label>
+              </div>
+            </div>
+            <div class="column">
 
-          <h3 class="accentCol">Clock On/Off</h3>
-          <div class="accentCol" id="clockContent">
-            <label class="accentCol">Off</label>
-            <label class="NoTop"><input type="checkbox" checked class="sideBackground" id="clockCheck">
-              <link class="rippleJS fill checkbox"></label>
-            <label class="accentCol">On</label>
+            </div>
           </div>
 
-          <h3 class="accentCol">Date Off/On</h3>
-          <div id="dateMode">
 
-            <label class="accentCol">Date Off</label>
-            <label class="NoTop"><input type="checkbox" class="sideBackground" id="displaydate">
-              <link class="rippleJS fill checkbox"></label>
-            <label class="accentCol">Date On</label>
-
-          </div>
-
-          <h3 class="accentCol">Search Bar On/Off</h3>
-          <div class="accentCol" id="searchContent">
-            <label class="accentCol">Off</label>
-            <label class="NoTop"><input type="checkbox" checked class="sideBackground" id="searchCheck">
-              <link class="rippleJS fill checkbox"></label>
-            <label class="accentCol">On</label>
-          </div>
-
-          <h3 class="accentCol">Submit Button On/Off</h3>
-          <div id="submitOptions">
-
-            <label class="accentCol">Off</label>
-            <label class="NoTop"><input type="checkbox" class="sideBackground" id="submitToggle" checked>
-              <link class="rippleJS fill checkbox"></label>
-            <label class="accentCol">On</label>
-
-          </div>
-
-          <h3 class="accentCol">Speed Dials On/Off</h3>
-          <div class="accentCol" id="dialContent">
-            <label class="accentCol">Off</label>
-            <label class="NoTop"><input type="checkbox" checked class="sideBackground" id="dialCheck">
-              <link class="rippleJS fill checkbox"></label>
-            <label class="accentCol">On</label>
-          </div>
         </div>
         <div class="SettingsSection" id="speedDialSettings">
           <h4 class="accentCol">Speed Dial Options</h4>
-          <br />
-          <a class="sideAccent sideBackground button" type="button" href="other/speed-dial.html">Speed Dial Values
-            <link class="rippleJS fill"></a>
-          <br>
-          <br>
-          <h3 class="accentCol">Number Of Speed Dials</h3>
-          <div class="Slider">
-            <input class="sliderRange sideBackground" id="SpeedsliderRange" type="range" min="0" max="10" value="5">
-            <span class="sliderValue accentCol" id="SpeedSliderValue">0</span>
-          </div>
-
-          <h3 class="accentCol">Speed Dials Square/Circle</h3>
-          <div id="speedDialShapeOptions">
-
-            <label class="accentCol">Square</label>
-            <label class="NoTop"><input type="checkbox" class="sideBackground" id="shapeToggle">
-              <link class="rippleJS fill checkbox"></label>
-            <label class="accentCol">Circle</label>
-
+          <div class="row">
+            <div class="column">
+              <a class="sideAccent sideBackground button" type="button" href="other/speed-dial.html">Speed Dial Values
+                <link class="rippleJS fill"></a>
+            </div>
+            <div class="column">
+              <h3 class="accentCol">Number Of Speed Dials</h3>
+              <div class="Slider">
+                <input class="sliderRange sideBackground" id="SpeedsliderRange" type="range" min="0" max="10" value="5">
+                <span class="sliderValue accentCol" id="SpeedSliderValue">0</span>
+              </div>
+            </div>
+            <div class="column">
+              <h3 class="accentCol">Speed Dials Square/Circle</h3>
+              <div id="speedDialShapeOptions">
+                <label class="accentCol">Square</label>
+                <label class="NoTop"><input type="checkbox" class="sideBackground" id="shapeToggle">
+                <label class="accentCol">Circle</label>
+              </div>
+            </div>
           </div>
         </div>
         <div class="SettingsSection" id="Widgetsettings">
           <h4 class="accentCol">Widgets</h4>
+          <div class="row">
+            <div class="column">
 
-          <h3 class="accentCol">Tasks On/Off</h3>
-          <div id="taskOptions">
+              <h3 class="accentCol">Tasks On/Off</h3>
+              <div id="taskOptions">
 
-            <label class="accentCol">Tasks Off</label>
-            <label class="NoTop"><input type="checkbox" class="sideBackground" id="taskToggle" checked>
-              <link class="rippleJS fill checkbox"></label>
-            <label class="accentCol">Tasks On</label>
+                <label class="accentCol">Tasks Off</label>
+                <label class="NoTop"><input type="checkbox" class="sideBackground" id="taskToggle" checked>
+                <label class="accentCol">Tasks On</label>
 
+              </div>
+            </div>
+            <div class="column">
+
+              <h3 class="accentCol">RSS Feed On/Off</h3>
+              <div id="RSS">
+
+                <label class="accentCol">RSS Off</label>
+                <label class="NoTop"><input type="checkbox" class="sideBackground" id="rssToggle" checked>
+                <label class="accentCol">RSS On</label>
+
+              </div>
+            </div>
+            <div class="column">
+
+              <h3 class="accentCol">Weather On/Off</h3>
+              <div id="weatherOptions">
+
+                <label class="accentCol">Weather Off</label>
+                <label class="NoTop"><input type="checkbox" class="sideBackground" id="weatherToggle">
+                <label class="accentCol">Weather On</label>
+
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+
+              <h3 class="accentCol">Weather Celsius/Fahrenheit</h3>
+              <div id="weatherOptions">
+
+                <label class="accentCol">C</label>
+                <label class="NoTop"><input type="checkbox" class="sideBackground" id="tempToggle" checked>
+                <label class="accentCol">F</label>
+
+              </div>
+            </div>
+            <div class="column">
+
+              <h3 class="accentCol">Misc Text</h3>
+              <select id="MiscTextSett" class="setFont button sideBackground sideAccent">
+                <option class="setFont" value="None">None</option>
+                <option class="setFont" value="Weather">Weather</option>
+                <option class="setFont" value="Quote">Quote</option>
+              </select>
+
+            </div>
+            <div class="column">
+
+            </div>
           </div>
 
-          <h3 class="accentCol">RSS Feed On/Off</h3>
-          <div id="RSS">
 
-            <label class="accentCol">RSS Off</label>
-            <label class="NoTop"><input type="checkbox" class="sideBackground" id="rssToggle" checked>
-              <link class="rippleJS fill checkbox"></label>
-            <label class="accentCol">RSS On</label>
 
-          </div>
-
-          <h3 class="accentCol">Weather On/Off</h3>
-          <div id="weatherOptions">
-
-            <label class="accentCol">Weather Off</label>
-            <label class="NoTop"><input type="checkbox" class="sideBackground" id="weatherToggle">
-              <link class="rippleJS fill checkbox"></label>
-            <label class="accentCol">Weather On</label>
-
-          </div>
-
-          <h3 class="accentCol">Weather Celsius/Fahrenheit</h3>
-          <div id="weatherOptions">
-
-            <label class="accentCol">C</label>
-            <label class="NoTop"><input type="checkbox" class="sideBackground" id="tempToggle" checked>
-              <link class="rippleJS fill checkbox"></label>
-            <label class="accentCol">F</label>
-
-          </div>
-
-          <h3 class="accentCol">Misc Text</h3>
-          <select id="MiscTextSett" class="setFont button sideBackground sideAccent">
-            <option class="setFont" value="None">None</option>
-            <option class="setFont" value="Weather">Weather</option>
-            <option class="setFont" value="Quote">Quote</option>
-          </select>
         </div>
         <div class="SettingsSection" id="otherSettings">
           <h3 class="accentCol">Search Engine</h3>
@@ -295,29 +348,10 @@
               <option class="setFont" value="https://search.yahoo.com/search?q=">Yahoo</option>
             </select>
           </div>
-          <h3 class="accentCol">Font</h3>
-          <div id="Fonts">
-            <select id="FontSelections" class="button sideBackground sideAccent">
-              <option style="font-family:Concert One;" value="Concert One">Concert One</option>
-              <option style="font-family:Fredoka One;" value="Fredoka One">Fredoka One</option>
-              <option style="font-family:Indie Flower;" value="Indie Flower">Indie Flower</option>
-              <option style="font-family:PT Serif;" value="PT Serif">PT Serif</option>
-              <option style="font-family:Poppins;" value="Poppins">Poppins</option>
-              <option style="font-family:Raleway;" value="Raleway">Raleway</option>
-              <option style="font-family:Open Sans;" value="Open Sans">Open Sans</option>
-              <option style="font-family:sans-serif;" value="sans-serif">Sans Serif</option>
-            </select>
-          </div>
-          <h3 class="accentCol">Box Opacity</h3>
-          <div class="Slider">
-            <input class="sliderRange sideBackground" id="OpacitySliderRange" type="range" min="0" max="100" value="100">
-            <span class="sliderValue accentCol" id="OpacitySliderValue">0</span>
-          </div>
           <h3 class="accentCol">Clock 24/12</h3>
           <div class="accentCol" id="clockMode">
             <label class="accentCol">24 Hour Clock</label>
             <label class="NoTop"><input type="checkbox" class="sideBackground" id="check">
-              <link class="rippleJS fill checkbox"></label>
             <label class="accentCol">12 Hour Clock</label>
           </div>
         </div>
@@ -328,7 +362,7 @@
           <link class="rippleJS fill">
         </label>
         <label class="NoTop">
-          <button type="button" class="accentCol backgroundCol button textButton" id="reset"><i class="fas fa-redo-alt"></i></button>
+          <button type="button" class="accentCol backgroundCol button textButton fas fa-redo-alt" id="reset"> </button>
           <link class="rippleJS fill">
         </label>
         <label class="NoTop">
@@ -369,5 +403,4 @@
     <br />
   </div>
 </body>
-
 </html>

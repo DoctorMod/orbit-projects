@@ -1,3 +1,6 @@
+/* This CSS Is Ordered From Top Left - Bottom Right
+/* Global CSS */
+
 body, html {
   height: 100%;
   padding: 0;
@@ -10,161 +13,6 @@ body, html {
   overflow: hidden;
 }
 
-#settingsOpen {
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
-  outline: none;
-  font-size: 30px;
-  transition-duration: 300ms;
-}
-
-/* Global CSS */
-a {
-  text-decoration: none;
-}
-
-h1 {
-  position: relative;
-  font-size: 50px;
-  top: 200px
-}
-
-h2 {
-  font-size: 100px;
-}
-
-h3 {
-  font-size: 15px;
-}
-
-h4 {
-  font-size: 25px;
-}
-
-h5 {
-  font-size: 30px;
-}
-
-h6 {
-  font-size: 20px;
-}
-
-p {
-  font-size: 20px;
-}
-
-label {
-  position: relative;
-  top: -7.5px;
-}
-
-div {
-  font-size: 15px;
-  text-align: center;
-}
-
-input, body {
-  font-family: 'Concert One', sans-serif;
-}
-
-/* Checkbox CSS */
-input[type="checkbox"] {
-  position: relative;
-  width: 40px;
-  height: 20px;
-  /*margin-top: -20px;*/
-  -webkit-appearance: none;
-  background: #F5B7B1;
-  outline: none;
-  border-radius: 20px;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
-  transition: .5s;
-}
-
-input:checked[type="checkbox"] {
-  background: #82E0AA;
-}
-
-input[type="checkbox"]:before {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border-radius: 20px;
-  top: 0;
-  left: 0;
-  background: #fff;
-  transform: scale(1.1);
-  box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
-  transition: .5s;
-}
-
-input:checked[type="checkbox"]:before {
-  left: 20px;
-}
-
-/* End Of Checkbox CSS */
-/* Color CSS */
-input[type="color"] {
-  -webkit-appearance: none;
-  border: solid 2px #FFFFFF;
-  background: none;
-  border-radius: 100%;
-  width: 32px;
-  height: 32px;
-  outline: none;
-  position: relative;
-  top: 8px;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
-}
-
-input[type="color"]::-webkit-color-swatch-wrapper {
-  padding: 0;
-  border-radius: 100%;
-}
-
-input[type="color"]::-webkit-color-swatch {
-  border: none;
-  border-radius: 100%;
-}
-
-.sliderValue {
-  position: relative;
-  bottom: 7.5px;
-}
-
-.sliderRange {
-  -webkit-appearance: none;
-  width: 80%;
-  height: 25px;
-  outline: none;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-  border-radius: 20px;
-}
-
-.sliderRange::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  border-radius: 100%;
-  border: 3px solid #fff;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
-}
-
-.noTop {
-  top: 0px;
-}
-
-.rippleJS {
-  cursor: pointer;
-}
-
-/* End Of Color CSS */
-/* Other Global CSS */
 #bg {
   /* Add the blur effect */
   /* Full height */
@@ -203,21 +51,159 @@ input[type="color"]::-webkit-color-swatch {
   background-color: #1976D2;
 }
 
-@keyframes drop {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, -75%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
+a {
+  text-decoration: none;
+  font-size: 2vw;
 }
 
-/* End Of Other Global CSS */
-/* End Of Global CSS */
-/*Nav Box CSS*/
+h1 {
+  position: relative;
+  font-size: 5.0vw;
+  top: 200px
+}
+
+h2 {
+  font-size: 10.0vw;
+}
+
+h3 {
+  font-size: 1.5vw;
+}
+
+h4 {
+  font-size: 2.25vw;
+}
+
+h5 {
+  font-size: 3.0vw;
+}
+
+h6 {
+  font-size: 2.0vw;
+}
+
+p {
+  font-size: 2.0vw;
+}
+
+label {
+  position: relative;
+  top: -7.5px;
+  font-size: 1.5vw;
+}
+
+div {
+  font-size: 15px;
+  text-align: center;
+}
+
+span {
+  font-size: 1.5vw;
+}
+
+input, body {
+  font-family: 'Concert One', sans-serif;
+}
+
+/* Checkbox CSS */
+input[type="checkbox"] {
+  position: relative;
+  width: 4.0vw;
+  height: 2.0vw;
+  /*margin-top: -20px;*/
+  -webkit-appearance: none;
+  background: #F5B7B1;
+  outline: none;
+  border-radius: 20px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+  transition: .5s;
+}
+
+input:checked[type="checkbox"] {
+  background: #82E0AA;
+}
+
+input[type="checkbox"]:before {
+  content: '';
+  position: absolute;
+  width: 2.0vw;
+  height: 2.0vw;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+  transition: .5s;
+}
+
+input:checked[type="checkbox"]:before {
+  left: 2.0vw;
+}
+
+/* End Of Checkbox CSS */
+/* Color Input CSS */
+
+input[type="color"] {
+  -webkit-appearance: none;
+  border: solid 2px #FFFFFF;
+  background: none;
+  border-radius: 100%;
+  width: 4vw;
+  height: 4vw;
+  outline: none;
+  position: relative;
+  top: 8px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 100%;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 100%;
+}
+
+.sliderValue {
+  position: relative;
+  bottom: 7.5px;
+}
+
+.sliderRange {
+  -webkit-appearance: none;
+  width: 15vw;
+  height: 2.5vw;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border-radius: 20px;
+}
+
+.sliderRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border-radius: 100%;
+  border: 3px solid #fff;
+  appearance: none;
+  width: 2.5vw;
+  height: 2.5vw;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+}
+
+.noTop {
+  top: 0px;
+}
+
+.rippleJS {
+  cursor: pointer;
+}
+
+/* End Of Color Input CSS */
+/*Modal CSS*/
+
 .modal {
   text-align: center;
   display: none;
@@ -275,13 +261,26 @@ input[type="color"]::-webkit-color-swatch {
   font-size: 30px;
 }
 
-/*End of Nav CSS*/
-/* Side Tool Open CSS */
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -75%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* End of Modal CSS*/
+/* End Of Global CSS */
+/* Widget Open CSS */
 #todoOpen {
   position: fixed;
   top: 10px !important;
   right: 10px !important;
-  font-size: 20px;
+  font-size: 1.75vw;
   outline: none;
   transition-duration: 300ms;
   color: #1976D2;
@@ -298,7 +297,7 @@ input[type="color"]::-webkit-color-swatch {
   position: fixed;
   top: 40px;
   right: 10px;
-  font-size: 20px;
+  font-size: 1.75vw;
   outline: none;
   transition-duration: 300ms;
   color: #1976D2;
@@ -315,7 +314,7 @@ input[type="color"]::-webkit-color-swatch {
   position: fixed;
   top: 73px;
   right: 10px;
-  font-size: 20px;
+  font-size: 1.75vw;
   outline: none;
   transition-duration: 300ms;
   color: #1976D2;
@@ -328,12 +327,14 @@ input[type="color"]::-webkit-color-swatch {
   cursor: pointer;
 }
 
-/* End of Side Tool Open CSS */
+/* End of Widget Open CSS */
 /* Clock & Date CSS */
 .clock {
-  position: relative;
-  top: 150px;
-  font-size: 60px;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -20%);
+  font-size: 4.5vw;
   letter-spacing: 7px;
   cursor: pointer;
   transition: all ease 0.8s;
@@ -350,11 +351,20 @@ input[type="color"]::-webkit-color-swatch {
 
 /* End Of Clock & Date CSS */
 /* Search Input CSS*/
+
+.form {
+  position:absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -35%);
+}
 .omnibox {
   font-weight: 50;
   font-size: 28px;
   outline: none;
-  width: 600px;
+  width: 45vw;
+  height: 6vh;
+  min-width: 450px;
   border: solid 2px #1976D2;
   background-color: #FFFFFF00;
   border-radius: 30px;
@@ -364,8 +374,6 @@ input[type="color"]::-webkit-color-swatch {
   opacity: 1;
   transition: all ease 0.8s;
   text-align: center;
-  position: relative;
-  top: 190px;
 }
 
 .omnibox:hover {
@@ -376,13 +384,13 @@ input[type="color"]::-webkit-color-swatch {
   outline: none;
   background: none;
   border: none;
-  font-size: 40px;
+  font-size: 45px;
   transition-duration: 300ms;
   transition: all ease 0.8s;
   text-align: center;
   position: absolute;
-  top: 180px;
-  left: 35px;
+  left: 350px;
+  top: -40px;
   -webkit-animation: continuasRotation 60s infinite linear;
 }
 
@@ -395,14 +403,19 @@ input[type="color"]::-webkit-color-swatch {
 /* Media Button CSS */
 .middle {
   text-align: center;
-  position: relative;
-  top: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 450px;
 }
 
 .btn {
   display: none;
-  width: 90px;
-  height: 90px;
+  height: 7vw;
+  width: 7vw;
+  min-width: 72.5px;
+  min-height: 72.5px;
   margin: 10px;
   border-radius: 30%;
   box-shadow: 0 5px 15px -5px #00000070;
@@ -412,8 +425,8 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 .btn i, .btn span {
-  line-height: 90px;
-  font-size: 26px;
+  line-height: 7.25vw;
+  font-size: 2.125vw;
   transition: 0.2s;
   animation: font-size-decrease 0.25s;
 }
@@ -425,21 +438,21 @@ input[type="color"]::-webkit-color-swatch {
 
 @keyframes font-size-increase {
   0% {
-    font-size: 26px;
+    font-size: 2.125vw;
   }
 
   100% {
-    font-size: 33.6px;
+    font-size: 2.86vw;
   }
 }
 
 @keyframes font-size-decrease {
   0% {
-    font-size: 33.6px;
+    font-size: 2.86vw;
   }
 
   100% {
-    font-size: 26px;
+    font-size: 2.125vw;
   }
 }
 
@@ -478,12 +491,22 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 /* End Of Media Button CSS */
+
 .MiscText {
   position: absolute;
-  font-size: 30px !important;
+  font-size: 2.0vw;
   top: 90%;
   left: 50%;
   transform: translate(-50%, -90%)
+}
+
+#settingsOpen {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  outline: none;
+  font-size: 2.5vw;
+  transition-duration: 300ms;
 }
 
 /* Todo CSS */
@@ -727,6 +750,10 @@ input[type="color"]::-webkit-color-swatch {
   position: relative;
 }
 
+.sideIcon {
+  pointer-events: none;
+}
+
 .Sett .closebtn {
   position: absolute;
   top: -10px;
@@ -745,31 +772,24 @@ input[type="color"]::-webkit-color-swatch {
 
 .sideSettings {
   position: absolute;
-  top: 27%;
+  top: 50%;
   left: 5%;
-  transform: translate(-5%, -27%);
-  width: 200px;
-  height: 82%;
+  transform: translate(-5%, -50%);
+  width: 15vw;
+  height: 90vh;
   z-index: -1;
   border-radius: 5px;
 }
 
-#orbitSettingsLogo {
-  border-radius: 100%;
-  border: 1px solid black;
-  width: 75px;
-  height: 75px;
-}
-
 .settingsMain {
-  width: 75%;
-  height: 82%;
-  border-radius: 5px;
+  width: 75vw;
+  height: 90vh;
+  border-radius: 5px 5px 0px 0px;
   position: absolute;
-  top: 27%;
+  top: 50%;
   left: 90%;
   overflow: scroll;
-  transform: translate(-90%, -27%);
+  transform: translate(-90%, -50%);
 }
 
 .settingsMain h4 {
@@ -797,12 +817,12 @@ input[type="color"]::-webkit-color-swatch {
   color: #1976D2;
   background-color: white;
   font-weight: 50;
-  font-size: 15px;
+  font-size: 1.5vw;
   text-align: center;
   width: auto;
   border: solid 0px;
   border-radius: 5px;
-  padding: 5px 10px;
+  padding: 0.5vw 1vw;
   transition-duration: 300ms;
   box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
   text-decoration: inherit;
@@ -841,41 +861,13 @@ input[type="color"]::-webkit-color-swatch {
   box-shadow: none;
 }
 
-.sliderValue {
-  position: relative;
-  bottom: 7.5px;
-}
-
-.sliderRange {
-  -webkit-appearance: none;
-  width: 80%;
-  height: 25px;
-  outline: none;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-  border-radius: 20px;
-}
-
-.sliderRange::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  border-radius: 100%;
-  border: 3px solid #fff;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
-  transition-duration: 100ms;
-  border: none;
-}
-
-.sliderRange::-webkit-slider-thumb:active {
-  width: 30px;
-  height: 30px;
-}
-
 /*Widgets*/
 .Widgets {
   margin: 0 5;
+}
+
+.Widgets h3 {
+  font-size: 1.25vw;
 }
 
 .widgetButton {
@@ -888,14 +880,15 @@ input[type="color"]::-webkit-color-swatch {
 /*End Of Widgets*/
 .settingsBottomSheet {
   position: sticky;
-  width: 74.6%;
-  padding: 3px;
+  width: 75vw;
+  padding-top: 3px;
+  padding-bottom: 3px;
   position: absolute;
-  top: 86.3%;
+  top: 94.5%;
   left: 90%;
-  transform: translate(-90%, -86.3%);
+  transform: translate(-90%, -94.5%);
   background-color: #000000aa;
-  border-radius: 20px 20px 1px 5px;
+  border-radius: 20px 20px 0px 0px;
 }
 
 #settingsHeader {
@@ -907,13 +900,23 @@ input[type="color"]::-webkit-color-swatch {
 #DoneClose, #CancelClose {
   padding: 5px 30px;
   border-radius: 30px;
+  font-size: 20px !important;
 }
 
 #reset {
   box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
   border-radius: 100%;
-  width: 35px;
-  height: 35px;
+  width: 50px !important;
+  height: 35px !important;
+  font-size: 20px;
+}
+
+#iReset {
+  position: relative;
+  right: 6px;
+  width: 0px;
+  height: 0px;
+  font-size: 15px !important;
 }
 
 #submitSettings {
@@ -963,3 +966,83 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 /* End of Settings CSS */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* MAX WIDTH MEDIA QUERIES */
+
+@media screen and (max-width: 1200px) {
+  h3 {
+      font-size: 10px;
+  }
+
+  span, label {
+      font-size: 9.5px;
+    }
+
+  .btn i, .btn span {
+      line-height: 72.5px;
+      font-size: 25px;
+  }
+
+  #settingsOpen {
+     font-size: 30px;
+  }
+  #todoOpen, #rssOpen, #weatherOpen{
+     font-size: 17.5px;
+  }
+
+  .clock {
+     font-size: 45px;
+  }
+}
+
+/* MAX WIDTH MEDIA QUERIES END */
+/* MIN WIDTH MEDIA QUERIES */
+
+@media screen and (min-width: 1200px) {
+  #settingsOpen {
+     font-size: 35px;
+  }
+
+  #todoOpen, #rssOpen, #weatherOpen{
+     font-size: 22.5px;
+  }
+}
+
+/* MIN WIDTH MEDIA QUERIES END */
+
+@keyframes font-size-increase {
+  0% {
+    font-size: 25px;
+  }
+
+  100% {
+    font-size: 32.6px;
+  }
+}
+
+@keyframes font-size-decrease {
+  0% {
+    font-size: 32.6px;
+  }
+
+  100% {
+    font-size: 25px;
+  }
+}

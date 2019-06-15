@@ -155,7 +155,6 @@ document.getElementById("settingsOpen").addEventListener("click", function() {
   sideStuffOpenAnim("settingsOpen");
 });
 document.getElementById("DoneClose").addEventListener("click", onsubmitModifier);
-document.getElementById("settingsClose").addEventListener('click', onsubmitModifier);
 document.getElementById("rssOpen").addEventListener("click", function() {
   setTimeout(function() {
     sideStuffOpen("RssSide");
@@ -181,9 +180,17 @@ document.getElementById("weatherClose").addEventListener("click", function() {
   sideStuffClose("weatherSideTool");
 });
 document.getElementById("CancelClose").addEventListener('click', reload);
-document.getElementById("reset").addEventListener('click', reset);
+document.getElementById("reset").addEventListener('click', resetFunction);
 document.getElementById("resetbk").addEventListener('click', resettwo);
 
+
+function resetFunction() {
+  if (confirm("Are you sure you want to reset?")) {
+    reset();
+  } else {
+
+  }
+}
 //Modal
 var modal = document.getElementById('myModal');
 
