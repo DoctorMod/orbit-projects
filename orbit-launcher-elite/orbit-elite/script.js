@@ -1,5 +1,6 @@
 //Activates First Run
 
+/*
 function onInstall() {
   reset()
   onsubmitModifier();
@@ -28,6 +29,7 @@ if (currVersion != prevVersion) {
   }
   localStorage['version'] = currVersion;
 }
+*/
 
 //show Time
 
@@ -698,7 +700,7 @@ function slideshow() {
       try {
         localStorage.file = JSON.stringify(filecount);
       } catch (err) {
-        modalOpen("ERROR", "There was an error with uploading The Background file, maybe it is too big?", true);
+        modalOpen("There Was A Mistake!", "There was an error with uploading your background/s, either your file size is above 5 MB, or you have too many files selected.", true);
         disableReload = true;
       }
       console.log("Done " + JSON.parse(localStorage.file));
