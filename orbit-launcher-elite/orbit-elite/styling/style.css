@@ -348,7 +348,6 @@ input[type="color"]::-webkit-color-swatch {
 
 /* End Of Clock & Date CSS */
 /* Search Input CSS*/
-
 .omnibox {
   font-weight: 50;
   font-size: 28px;
@@ -365,14 +364,14 @@ input[type="color"]::-webkit-color-swatch {
   opacity: 1;
   transition: all ease 0.8s;
   text-align: center;
-  position:absolute;
+  position: absolute;
   left: 50%;
   top: 35%;
   transform: translate(-50%, -35%);
 }
 
 .omnibox:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) translate(-45%, -25%);
 }
 
 .submit {
@@ -870,7 +869,6 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 /*Widgets*/
-
 .widgets h3 {
   font-size: 1.25vw;
 }
@@ -1069,7 +1067,6 @@ input[type="color"]::-webkit-color-swatch {
   .submit {
     font-size: 40px;
   }
-
 }
 
 /* MAX WIDTH MEDIA QUERIES END */
