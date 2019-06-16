@@ -445,6 +445,7 @@ checkSlider();
 
 //Reset
 function reset(val) {
+  localStorage.api = "false";
   localStorage.sub = "None";
   localStorage.searchToggle = "true";
   localStorage.clockToggle = "true";
@@ -544,6 +545,7 @@ function resettwo() {
 //Submit
 function onsubmitModifier() {
   if (!isColorEqual()) {
+    localStorage.api = document.getElementById('nasa').checked;
     localStorage.sub = document.getElementById('MiscTextSett').value;
     localStorage.searchToggle = document.getElementById("searchCheck").checked;
     localStorage.clockToggle = document.getElementById("clockCheck").checked;
@@ -680,18 +682,31 @@ chrome.storage.sync.set({
 var backgroundNumber = 0;
 
 function backgroundImage() {
-  if (localStorage.file != "Reset" && localStorage.file != "null") {
-    file = JSON.parse(localStorage.file);
-    document.getElementById('bg').style.backgroundImage = "url(" + file[backgroundNumber] + ")";
-    if (backgroundNumber > file.length - 2) {
-      backgroundNumber = 0;
-    } else {
-      backgroundNumber++;
+  if (localStorage.api == "false") {
+    if (localStorage.file != "Reset" && localStorage.file != "null") {
+      file = JSON.parse(localStorage.file);
+      document.getElementById('bg').style.backgroundImage = "url(" + file[backgroundNumber] + ")";
+      if (backgroundNumber > file.length - 2) {
+        backgroundNumber = 0;
+      } else {
+        backgroundNumber++;
+      }
+      setTimeout(backgroundImage, localStorage.slideTimer * 60000);
     }
-    setTimeout(backgroundImage, localStorage.slideTimer * 60000);
+  } else {
+    document.getElementById('nasa').checked = "true";
+    setTimeout(loadNasa, 100);
   }
 }
 backgroundImage();
+
+function loadNasa() {
+  var client = new HttpClient();
+  client.get('https://api.nasa.gov/planetary/apod?api_key=Gi6fF3PqNm9oSLsMEgW7u4Td5zMKIIOO9TVMOtG5', function(response) {
+    document.getElementById('bg').style.backgroundImage = "url(" + JSON.parse(response).url + ")";
+    console.log(JSON.parse(response));
+  });
+}
 
 var slidecount = 0;
 var filecount = [];
