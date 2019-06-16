@@ -18,7 +18,7 @@ function getVersion() {
 
 // Check if the version has changed.
 var currVersion = getVersion();
-var prevVersion = localStorage['version']
+var prevVersion = localStorage.version;
 if (currVersion != prevVersion) {
   // Check if we just installed this extension.
   if (typeof prevVersion == 'undefined') {
@@ -26,7 +26,7 @@ if (currVersion != prevVersion) {
   } else {
     onUpdate();
   }
-  localStorage['version'] = currVersion;
+  localStorage.version = currVersion;
 }
 
 //show Time
@@ -229,6 +229,10 @@ if (localStorage.dates === "true") {
 }
 
 //settings
+
+if (window.location.hash == "#settings") {
+  document.getElementById("Settings").style.width = "100%";
+}
 
 //shhhhhh!
 
@@ -550,9 +554,6 @@ function onsubmitModifier() {
     localStorage.rssActive = document.getElementById("rssToggle").checked;
     localStorage.temp = document.getElementById("tempToggle").checked;
     slideshow();
-    chrome.storage.sync.set({
-      css: localStorage.css
-    })
   }
 }
 
@@ -570,7 +571,7 @@ var disableReload = false;
 
 function reload() {
   if (!disableReload) {
-    document.location.reload(true);
+    window.location = "index.html";
   }
 }
 //Color picker
