@@ -389,6 +389,7 @@ input[type="color"]::-webkit-color-swatch {
   left: 75%;
   top: 36%;
   transform: translate(-10%, -50%);
+  display: show;
 }
 
 .submit:hover {
@@ -1066,6 +1067,12 @@ input[type="color"]::-webkit-color-swatch {
 
   .submit {
     font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  #globe {
+    display: none;
   }
 }
 
