@@ -752,6 +752,7 @@ input[type="color"]::-webkit-color-swatch {
 
 .sideIcon {
   pointer-events: none;
+  font-size: 2.25vw;
 }
 
 .Sett .closebtn {
@@ -984,6 +985,20 @@ input[type="color"]::-webkit-color-swatch {
   clear: both;
 }
 
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 /* MAX WIDTH MEDIA QUERIES */
 
 @media screen and (max-width: 1200px) {
@@ -1003,14 +1018,29 @@ input[type="color"]::-webkit-color-swatch {
   #settingsOpen {
      font-size: 30px;
   }
+
   #todoOpen, #rssOpen, #weatherOpen{
-     font-size: 17.5px;
+    font-size: 17.5px;
   }
 
   .clock {
      font-size: 45px;
   }
+
+  #OpenvisualSettings::after {
+    content: none;
+  }
+
 }
+
+.SettingsSelection {
+  border-radius: 2px;
+}
+
+#OpenvisualSettings::after {
+  content: " Visual";
+}
+
 
 /* MAX WIDTH MEDIA QUERIES END */
 /* MIN WIDTH MEDIA QUERIES */
