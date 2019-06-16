@@ -1,6 +1,5 @@
 /* This CSS Is Ordered From Top Left - Bottom Right
 /* Global CSS */
-
 body, html {
   height: 100%;
   padding: 0;
@@ -143,7 +142,6 @@ input:checked[type="checkbox"]:before {
 
 /* End Of Checkbox CSS */
 /* Color Input CSS */
-
 input[type="color"] {
   -webkit-appearance: none;
   border: solid 2px #FFFFFF;
@@ -203,7 +201,6 @@ input[type="color"]::-webkit-color-swatch {
 
 /* End Of Color Input CSS */
 /*Modal CSS*/
-
 .modal {
   text-align: center;
   display: none;
@@ -492,7 +489,6 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 /* End Of Media Button CSS */
-
 .MiscText {
   position: absolute;
   font-size: 2.0vw;
@@ -907,7 +903,8 @@ input[type="color"]::-webkit-color-swatch {
   box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
   border-radius: 100%;
   width: 50px !important;
-  height: 35px !important;
+  position: static;
+  height: 50px !important;
   font-size: 20px;
 }
 
@@ -966,7 +963,6 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 /* End of Settings CSS */
-
 * {
   box-sizing: border-box;
 }
@@ -1029,28 +1025,28 @@ input[type="color"]::-webkit-color-swatch {
 /* MAX WIDTH MEDIA QUERIES */
 @media screen and (max-width: 1200px) {
   h3 {
-      font-size: 10px;
+    font-size: 10px;
   }
 
   span, label {
-      font-size: 9.5px;
-    }
+    font-size: 9.5px;
+  }
 
   .btn i, .btn span {
-      line-height: 72.5px;
-      font-size: 25px;
+    line-height: 72.5px;
+    font-size: 25px;
   }
 
   #settingsOpen {
-     font-size: 30px;
+    font-size: 30px;
   }
 
-  #todoOpen, #rssOpen, #weatherOpen{
+  #todoOpen, #rssOpen, #weatherOpen {
     font-size: 17.5px;
   }
 
   .clock {
-     font-size: 45px;
+    font-size: 45px;
   }
 
   .mediaHide {
@@ -1069,14 +1065,13 @@ input[type="color"]::-webkit-color-swatch {
 
 /* MAX WIDTH MEDIA QUERIES END */
 /* MIN WIDTH MEDIA QUERIES */
-
 @media screen and (min-width: 1200px) {
   #settingsOpen {
-     font-size: 35px;
+    font-size: 35px;
   }
 
-  #todoOpen, #rssOpen, #weatherOpen{
-     font-size: 22.5px;
+  #todoOpen, #rssOpen, #weatherOpen {
+    font-size: 22.5px;
   }
 }
 

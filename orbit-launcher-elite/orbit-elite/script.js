@@ -2,9 +2,7 @@
 
 /*
 function onInstall() {
-  reset()
-  onsubmitModifier();
-  firstRun()
+  firstRun();
   console.log("Extension Installed");
 }
 
@@ -19,15 +17,15 @@ function getVersion() {
 
 // Check if the version has changed.
 var currVersion = getVersion();
-var prevVersion = localStorage.version;
+var prevVersion = localStorage.updateVersion;
 if (currVersion != prevVersion) {
   // Check if we just installed this extension.
-  if (typeof prevVersion == 'undefined') {
+  if (prevVersion == undefined) {
     onInstall();
   } else {
     onUpdate();
   }
-  localStorage.version = currVersion;
+  localStorage.updateVersion = currVersion;
 }
 */
 
@@ -446,7 +444,7 @@ function checkSlider() {
 checkSlider();
 
 //Reset
-function reset() {
+function reset(val) {
   localStorage.sub = "None";
   localStorage.searchToggle = "true";
   localStorage.clockToggle = "true";
@@ -526,7 +524,16 @@ function reset() {
   chrome.storage.sync.set({
     dialalt10: "https://twitter.com"
   }, function() {});
-  setTimeout(reload, 200);
+  if (val != "true") {
+    setTimeout(reload, 200);
+  } else {
+    localStorage.doModalNext = "true";
+  }
+}
+
+if (localStorage.doModalNext == "true") {
+  localStorage.doModalNext = false;
+  modalOpen('<img src="img/orbit-logo.png" id="modalInstallLogo"></img><h1>Orbit Newtab</h1><br><br><br>', '<p>Give a clean and modern look to your default homepage</p>', true);
 }
 
 function resettwo() {
@@ -1075,11 +1082,8 @@ function firstRun() {
   chrome.runtime.setUninstallURL("https://orbitelite.github.io/uninstall.html");
   if (localStorage.firstinstall != "true") {
     localStorage.firstinstall = "true";
-    localStorage.version = 166;
-    reset(false);
-    modalOpen('<img src="img/orbit-logo.png" id="modalInstallLogo"></img><h1>Orbit Newtab</h1><br><br><br>', '<p>Give a clean and modern look to your default homepage</p>', false);
+    reset("true");
   }
-  version = localStorage.version
   if (localStorage.version == null || localStorage.version == undefined) {
     localStorage.version = 0;
   } else if (localStorage.version < 146) {
@@ -1103,6 +1107,13 @@ function firstRun() {
   } else if (localStorage.version < 166) {
     modalOpen("Update 1.6.6 of Orbit Newtab, The Big/Bug Update", "In this recent update we added a Reload Button When There Are Glitches, Added Close Label To Closebtns, Changed RSS Feed Open Logo, Made Speed Dial Hover Effect Smoother, Fixed Not Loading When First Installed Bug, Added Spinning Submit Button, Added Submit Button On/Off, Removed Popup And Replaced It With Our Website, Instagram & Credits, Changed Defaults, Added A Few More Bugs!", true);
     localStorage.version = 166;
+  } else if (localStorage.version < 171) {
+    modalOpen("Update 1.7.1 of Orbit Newtab, The UI Redesign First Leap", "In the latest version of Orbit Newtab we have a: UI Redesign For Settings Menu, Added 'Are You Sure You Want To Reset?' Prompt, Added Misc Text For Quotes Or Weather On Screen, Re-added Original Popup, The Weather Icon Now Changes Depending On Different Weather Conditions, Ability To Disable All Content Except For Settings Menu Open Icon (For Background Only New-tab Wishes), Slideshows & Added A Fwe More Bugs.", true);
+    localStorage.version = 171;
+    localStorage.sub = "None";
+    localStorage.searchToggle = "true";
+    localStorage.clockToggle = "true";
+    localStorage.dialToggle = "true";
   }
 }
 // console.logs
