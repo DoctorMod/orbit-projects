@@ -408,13 +408,22 @@ input[type="color"]::-webkit-color-swatch {
   min-width: 450px;
 }
 
+#middle2 {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -70%);
+  min-width: 450px;
+}
+
 .btn {
   display: none;
   height: 7vw;
   width: 7vw;
   min-width: 72.5px;
   min-height: 72.5px;
-  margin: 10px;
+  margin: 5px;
   border-radius: 30%;
   box-shadow: 0 5px 15px -5px #00000070;
   overflow: hidden;
