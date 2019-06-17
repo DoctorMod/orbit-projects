@@ -1,6 +1,6 @@
 //Activates First Run
 
-/*
+
 function onInstall() {
   firstRun();
   console.log("Extension Installed");
@@ -27,7 +27,6 @@ if (currVersion != prevVersion) {
   }
   localStorage.updateVersion = currVersion;
 }
-*/
 
 //show Time
 
