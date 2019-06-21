@@ -50,6 +50,10 @@ body, html {
   background-color: #1976D2;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
 a {
   text-decoration: none;
   font-size: 2vw;
@@ -104,6 +108,37 @@ input, body {
   font-family: 'Concert One', sans-serif;
 }
 
+.button {
+  color: #1976D2;
+  background-color: white;
+  font-weight: 50;
+  font-size: 1.5vw;
+  text-align: center;
+  width: auto;
+  border: solid 0px;
+  border-radius: 5px;
+  padding: 0.5vw 1vw;
+  transition-duration: 300ms;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
+  text-decoration: inherit;
+  opacity: 1;
+  transition: all ease 0.8s;
+  outline: none;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /* Checkbox CSS */
 input[type="checkbox"] {
   position: relative;
@@ -140,8 +175,9 @@ input:checked[type="checkbox"]:before {
   left: 2.0vw;
 }
 
-/* End Of Checkbox CSS */
-/* Color Input CSS */
+/* End Of Checkbox */
+/* Color Input */
+
 input[type="color"] {
   -webkit-appearance: none;
   border: solid 2px #FFFFFF;
@@ -164,6 +200,17 @@ input[type="color"]::-webkit-color-swatch {
   border: none;
   border-radius: 100%;
 }
+
+.colorInput {
+  width: 75px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  text-transform: uppercase;
+}
+
+/* End Of Color Input CSS */
+/* Slider CSS */
 
 .sliderValue {
   position: relative;
@@ -191,16 +238,9 @@ input[type="color"]::-webkit-color-swatch {
   box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
 }
 
-.noTop {
-  top: 0px;
-}
+/* End of Slider */
+/* Modal CSS */
 
-.rippleJS {
-  cursor: pointer;
-}
-
-/* End Of Color Input CSS */
-/*Modal CSS*/
 .modal {
   text-align: center;
   display: none;
@@ -271,8 +311,35 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 /* End of Modal CSS*/
+/* Other Global CSS */
+/* Ripple Effect */
+
+.noTop {
+  top: 0px;
+}
+
+.rippleJS {
+  cursor: pointer;
+}
+
+.rippleJS.color {
+  top: -8;
+  border-radius: 100%;
+  width: 32px;
+  height: 32px;
+}
+
+.rippleJS.checkbox {
+  top: -8;
+  width: 40px;
+  height: 20px;
+}
+
+/* End of Ripple Effect */
+/* End of Other Global CSS */
 /* End Of Global CSS */
 /* Widget Open CSS */
+
 #todoOpen {
   position: fixed;
   top: 10px !important;
@@ -324,8 +391,40 @@ input[type="color"]::-webkit-color-swatch {
   cursor: pointer;
 }
 
+.sideWays {
+  animation: rotate 0.22s;
+  /*animation: transform 0.25s;*/
+  animation-fill-mode: forwards;
+}
+
+.sideWaysClose {
+  text-decoration: inherit;
+  animation: unRotate 0.22s;
+  /*animation: unTransform 0.25s;*/
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes unRotate {
+  0% {
+    transform: rotate(90deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 /* End of Widget Open CSS */
-/* Clock & Date CSS */
+
 .clock {
   position: absolute;
   left: 50%;
@@ -346,8 +445,6 @@ input[type="color"]::-webkit-color-swatch {
   transition: all ease 0.8s;
 }
 
-/* End Of Clock & Date CSS */
-/* Search Input CSS*/
 .omnibox {
   font-weight: 50;
   font-size: 28px;
@@ -374,6 +471,14 @@ input[type="color"]::-webkit-color-swatch {
   transform: scale(1.1) translate(-45%, -25%);
 }
 
+#globe {
+  position: fixed;
+  left: 75%;
+  top: 36%;
+  transform: translate(-10%, -50%);
+  display: show;
+}
+
 .submit {
   outline: none;
   background: none;
@@ -384,21 +489,13 @@ input[type="color"]::-webkit-color-swatch {
   -webkit-animation: continuasRotation 60s infinite linear;
 }
 
-#globe {
-  position: fixed;
-  left: 75%;
-  top: 36%;
-  transform: translate(-10%, -50%);
-  display: show;
-}
-
 .submit:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
 
-/* End of Search Input CSS */
-/* Media Button CSS */
+/* Speed Dials */
+
 .middle {
   text-align: center;
   position: absolute;
@@ -497,7 +594,8 @@ input[type="color"]::-webkit-color-swatch {
   }
 }
 
-/* End Of Media Button CSS */
+/* End of Speed Dials */
+
 .MiscText {
   position: absolute;
   font-size: 2.0vw;
@@ -516,37 +614,6 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 /* Todo CSS */
-.sideWays {
-  animation: rotate 0.22s;
-  /*animation: transform 0.25s;*/
-  animation-fill-mode: forwards;
-}
-
-.sideWaysClose {
-  text-decoration: inherit;
-  animation: unRotate 0.22s;
-  /*animation: unTransform 0.25s;*/
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(90deg);
-  }
-}
-
-@keyframes unRotate {
-  0% {
-    transform: rotate(90deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
-  }
-}
 
 .Todo {
   height: 100%;
@@ -561,8 +628,26 @@ input[type="color"]::-webkit-color-swatch {
   transition: 0.2s;
 }
 
+.Todo .closebtn {
+  position: absolute;
+  top: 0px;
+  right: 9px;
+  outline: none;
+  transition-duration: 300ms;
+  font-size: 35px;
+  color: white;
+}
+
 .Todo h4 {
   font-size: 20px;
+}
+
+.Todo a {
+  text-decoration: none;
+  transition-duration: 300ms;
+  color: white;
+  text-align: center;
+  position: relative;
 }
 
 #box, #addItem {
@@ -602,24 +687,6 @@ input[type="color"]::-webkit-color-swatch {
 #list h4:hover {
   text-decoration: line-through;
   cursor: pointer;
-}
-
-.Todo a {
-  text-decoration: none;
-  transition-duration: 300ms;
-  color: white;
-  text-align: center;
-  position: relative;
-}
-
-.Todo .closebtn {
-  position: absolute;
-  top: 0px;
-  right: 9px;
-  outline: none;
-  transition-duration: 300ms;
-  font-size: 35px;
-  color: white;
 }
 
 #box {
@@ -666,8 +733,9 @@ input[type="color"]::-webkit-color-swatch {
   transform: scale(1.05);
 }
 
-/* End Of Todo CSS */
-/* RSS CSS */
+/* End Of Todo */
+/* RSS */
+
 .RSS {
   height: 100%;
   width: 0;
@@ -695,8 +763,9 @@ input[type="color"]::-webkit-color-swatch {
   width: 90%;
 }
 
-/* End Of RSS CSS */
-/* Weather CSS */
+/* End Of RSS */
+/* Weather */
+
 .Weather {
   height: 100%;
   width: 0;
@@ -737,6 +806,7 @@ input[type="color"]::-webkit-color-swatch {
 
 /* End Of Weather CSS */
 /* Settings CSS */
+
 .Sett {
   height: 100%;
   width: 0;
@@ -747,34 +817,6 @@ input[type="color"]::-webkit-color-swatch {
   overflow-x: hidden;
   padding-top: 60px;
   transition: 0.2s;
-}
-
-.Sett a {
-  text-decoration: none;
-  transition-duration: 300ms;
-  text-align: center;
-  position: relative;
-}
-
-.sideIcon {
-  pointer-events: none;
-  font-size: 2.25vw;
-}
-
-.Sett .closebtn {
-  position: absolute;
-  top: -10px;
-  left: 10px;
-  font-size: 35px;
-}
-
-.SettingsSection {
-  display: none;
-}
-
-.SettingsSection h4 {
-  margin: 0;
-  padding: 33.250 inherit;
 }
 
 .sideSettings {
@@ -789,6 +831,11 @@ input[type="color"]::-webkit-color-swatch {
   overflow: scroll;
 }
 
+.sideIcon {
+  pointer-events: none;
+  font-size: 2.25vw;
+}
+
 .settingsMain {
   width: 75vw;
   height: 90vh;
@@ -798,57 +845,35 @@ input[type="color"]::-webkit-color-swatch {
   left: 90%;
   overflow: scroll;
   transform: translate(-90%, -50%);
-}
-
-.settingsMain h4 {
   margin-bottom: 0;
 }
 
-.rippleJS.color {
-  top: -8;
-  border-radius: 100%;
-  width: 32px;
-  height: 32px;
+#settingsHeader {
+  font-size: 50px;
+  position: relative;
+  top: -25px;
 }
 
-.rippleJS.checkbox {
-  top: -8;
-  width: 40px;
-  height: 20px;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-.button {
-  color: #1976D2;
-  background-color: white;
-  font-weight: 50;
-  font-size: 1.5vw;
-  text-align: center;
-  width: auto;
-  border: solid 0px;
-  border-radius: 5px;
-  padding: 0.5vw 1vw;
+.Sett a {
+  text-decoration: none;
   transition-duration: 300ms;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
-  text-decoration: inherit;
-  opacity: 1;
-  transition: all ease 0.8s;
-  outline: none;
+  text-align: center;
+  position: relative;
+}
+
+.SettingsSection {
+  display: none;
+  position: relative;
+  top: -50px;
+}
+
+.SettingsSection h4 {
+  margin: 0;
+  padding: 33.250 inherit;
 }
 
 .button:hover {
   cursor: pointer;
-}
-
-.colorInput {
-  width: 75px;
-  border: none;
-  outline: none;
-  border-radius: 30px;
-  text-transform: uppercase;
 }
 
 #getval {
@@ -869,19 +894,6 @@ input[type="color"]::-webkit-color-swatch {
   box-shadow: none;
 }
 
-/*Widgets*/
-.widgets h3 {
-  font-size: 1.25vw;
-}
-
-.widgetButton {
-  width: 60px;
-  margin-left: 2px;
-  font-size: 35px;
-  float: left;
-}
-
-/*End Of Widgets*/
 .settingsBottomSheet {
   position: sticky;
   width: 75vw;
@@ -893,12 +905,6 @@ input[type="color"]::-webkit-color-swatch {
   transform: translate(-90%, -94.5%);
   background-color: #000000aa;
   border-radius: 20px 20px 0px 0px;
-}
-
-#settingsHeader {
-  font-size: 50px;
-  position: relative;
-  top: -25px;
 }
 
 #DoneClose, #CancelClose {
@@ -916,93 +922,19 @@ input[type="color"]::-webkit-color-swatch {
   font-size: 20px;
 }
 
-#iReset {
-  position: relative;
-  right: 6px;
-  width: 0px;
-  height: 0px;
-  font-size: 15px !important;
-}
-
-#submitSettings {
-  color: #1976D2;
-  background-color: white;
-  font-weight: 50;
-  font-size: 15px;
-  text-align: center;
-  width: auto;
-  border: solid 0px;
-  border-radius: 30px;
-  padding: 5px 40px;
-  transition-duration: 300ms;
-  text-decoration: inherit;
-  opacity: 1;
-  transition: all ease 0.8s;
-  outline: none;
-}
-
-#settingsClose {
-  color: white;
-  top: 0px;
-}
-
-#reloadButton {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  outline: none;
-  font-size: 20px;
-  transition-duration: 300ms;
-}
-
-#reloadButton:hover {
-  animation: continuasRotation 1s;
-}
-
 /*.hoverRotate:hover {
   animation: continuasRotation 1.2s;
 }
 */
-.closeLabel {
-  font-size: 10px;
-  position: absolute;
-  top: 30px;
-  left: 10px;
-}
 
 /* End of Settings CSS */
 * {
   box-sizing: border-box;
 }
 
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .SettingsSelection {
   border-radius: 2px;
+  padding: 5px;
 }
 
 .mediaHide {
@@ -1031,6 +963,7 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 /* MAX WIDTH MEDIA QUERIES */
+
 @media screen and (max-width: 1200px) {
   h3 {
     font-size: 10px;
@@ -1078,6 +1011,7 @@ input[type="color"]::-webkit-color-swatch {
 
 /* MAX WIDTH MEDIA QUERIES END */
 /* MIN WIDTH MEDIA QUERIES */
+
 @media screen and (min-width: 1200px) {
   #settingsOpen {
     font-size: 35px;

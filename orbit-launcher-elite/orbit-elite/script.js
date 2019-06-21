@@ -1,6 +1,6 @@
 //Activates First Run
 
-/*
+
 function onInstall() {
   firstRun();
   console.log("Extension Installed");
@@ -27,7 +27,6 @@ if (currVersion != prevVersion) {
   }
   localStorage.updateVersion = currVersion;
 }
-*/
 
 //show Time
 
@@ -183,15 +182,13 @@ document.getElementById("CancelClose").addEventListener('click', reload);
 document.getElementById("reset").addEventListener('click', resetFunction);
 document.getElementById("resetbk").addEventListener('click', resettwo);
 
-
-function resetFunction() {
-  if (confirm("Are you sure you want to reset?")) {
-    reset();
-  } else {
-
-  }
-}
 //Modal
+
+if (localStorage.doModalNext == "true") {
+  localStorage.doModalNext = false;
+  modalOpen('<img src="img/orbit-logo.png" id="modalInstallLogo"></img><h1>Orbit Newtab</h1><br><br><br>', '<p>Give a clean and modern look to your default homepage</p>', true);
+}
+
 var modal = document.getElementById('myModal');
 
 var mReset = false;
@@ -406,7 +403,10 @@ if (localStorage.dialToggle == "false") {
   document.getElementById("dialCheck").checked = true;
 }
 
-console.log(localStorage.searchToggle + ", " + localStorage.clockToggle + ", " + localStorage.dialToggle);
+//Order Widgets.
+
+
+
 //Speed Dials
 document.getElementById("SpeedsliderRange").value = localStorage.dial;
 for (i = 1; i < parseInt(localStorage.dial) + 1; i++) {
@@ -442,9 +442,19 @@ function checkSlider() {
   setTimeout(checkSlider, 100);
 }
 checkSlider();
+//Check Reset
+
+function resetFunction() {
+  if (confirm("Are you sure you want to reset?")) {
+    reset();
+  } else {
+	
+  }
+}
 
 //Reset
 function reset(val) {
+  localStorage.api = "false";
   localStorage.sub = "None";
   localStorage.searchToggle = "true";
   localStorage.clockToggle = "true";
@@ -524,6 +534,9 @@ function reset(val) {
   chrome.storage.sync.set({
     dialalt10: "https://twitter.com"
   }, function() {});
+  	chrome.storage.sync.set({
+	backgroundURL: ""
+}, function() {})
   if (val != "true") {
     setTimeout(reload, 200);
   } else {
@@ -531,19 +544,18 @@ function reset(val) {
   }
 }
 
-if (localStorage.doModalNext == "true") {
-  localStorage.doModalNext = false;
-  modalOpen('<img src="img/orbit-logo.png" id="modalInstallLogo"></img><h1>Orbit Newtab</h1><br><br><br>', '<p>Give a clean and modern look to your default homepage</p>', true);
-}
-
 function resettwo() {
   localStorage.file = "Reset";
+  	chrome.storage.sync.set({
+	backgroundURL: ""
+}, function() {})
   onsubmitModifier();
 }
 
 //Submit
 function onsubmitModifier() {
   if (!isColorEqual()) {
+    localStorage.api = document.getElementById('nasa').checked;
     localStorage.sub = document.getElementById('MiscTextSett').value;
     localStorage.searchToggle = document.getElementById("searchCheck").checked;
     localStorage.clockToggle = document.getElementById("clockCheck").checked;
@@ -677,28 +689,53 @@ chrome.storage.sync.set({
 
 });
 //background image
+
 var backgroundNumber = 0;
 
+var backgroundURL = "";
+chrome.storage.sync.get(['backgroundURL'], function(result) {
+	backgroundURL = result.backgroundURL;
+	console.log(result);
+});
+
+
 function backgroundImage() {
-  if (localStorage.file != "Reset" && localStorage.file != "null") {
-    file = JSON.parse(localStorage.file);
-    document.getElementById('bg').style.backgroundImage = "url(" + file[backgroundNumber] + ")";
-    if (backgroundNumber > file.length - 2) {
-      backgroundNumber = 0;
-    } else {
-      backgroundNumber++;
+  if (localStorage.api == "false" && backgroundURL == "") {
+    if (localStorage.file != "Reset" && localStorage.file != "null") {
+      file = JSON.parse(localStorage.file);
+      document.getElementById('bg').style.backgroundImage = "url(" + file[backgroundNumber] + ")";
+      if (backgroundNumber > file.length - 2) {
+        backgroundNumber = 0;
+      } else {
+        backgroundNumber++;
+      }
+      setTimeout(backgroundImage, localStorage.slideTimer * 60000);
     }
-    setTimeout(backgroundImage, localStorage.slideTimer * 60000);
+  } else if (backgroundURL != ""){
+	  document.getElementById('bg').style.backgroundImage = "url(" + backgroundURL + ")";
+	  console.log("REE");
+  }else {
+    document.getElementById('nasa').checked = "true";
+    setTimeout(loadNasa, 100);
   }
 }
-backgroundImage();
+setTimeout(backgroundImage, 100);
+
+function loadNasa() {
+  var client = new HttpClient();
+  client.get('https://api.nasa.gov/planetary/apod?api_key=Gi6fF3PqNm9oSLsMEgW7u4Td5zMKIIOO9TVMOtG5', function(response) {
+    document.getElementById('bg').style.backgroundImage = "url(" + JSON.parse(response).url + ")";
+  });
+}
 
 var slidecount = 0;
 var filecount = [];
 
 function slideshow() {
   if (document.getElementById("getval").files.length != 0 && localStorage.file != "Reset") {
-
+		chrome.storage.sync.set({
+	backgroundURL: ""
+}, function() {})
     console.log(slidecount);
     if (slidecount < document.getElementById("getval").files.length) {
       readURL(document.getElementById("getval").files[slidecount]);
@@ -716,6 +753,7 @@ function slideshow() {
     }
   } else if (localStorage.file == "Reset") {
     localStorage.file = "null";
+	localStorage.backgroundURL = "";
     setTimeout(reload, 200);
   } else {
     setTimeout(reload, 200);
@@ -1108,7 +1146,7 @@ function firstRun() {
     modalOpen("Update 1.6.6 of Orbit Newtab, The Big/Bug Update", "In this recent update we added a Reload Button When There Are Glitches, Added Close Label To Closebtns, Changed RSS Feed Open Logo, Made Speed Dial Hover Effect Smoother, Fixed Not Loading When First Installed Bug, Added Spinning Submit Button, Added Submit Button On/Off, Removed Popup And Replaced It With Our Website, Instagram & Credits, Changed Defaults, Added A Few More Bugs!", true);
     localStorage.version = 166;
   } else if (localStorage.version < 171) {
-    modalOpen("Update 1.7.1 of Orbit Newtab, The UI Redesign First Leap", "In the latest version of Orbit Newtab we have a: UI Redesign For Settings Menu, Added 'Are You Sure You Want To Reset?' Prompt, Added Misc Text For Quotes Or Weather On Screen, Re-added Original Popup, The Weather Icon Now Changes Depending On Different Weather Conditions, Ability To Disable All Content Except For Settings Menu Open Icon (For Background Only New-tab Wishes), Slideshows & Added A Fwe More Bugs.", true);
+    modalOpen("Update 1.7.1 of Orbit Newtab, The UI Redesign First Leap", "In the latest version of Orbit Newtab we have a: UI Redesign For Settings Menu, Added 'Are You Sure You Want To Reset?' Prompt, Added Misc Text For Quotes Or Weather On Screen, Re-added Original Popup, The Weather Icon Now Changes Depending On Different Weather Conditions, Ability To Disable All Content Except For Settings Menu Open Icon (For Background Only New-tab Wishes), Slideshows & Added A Few More Bugs.", true);
     localStorage.version = 171;
     localStorage.sub = "None";
     localStorage.searchToggle = "true";
