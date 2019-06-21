@@ -534,6 +534,9 @@ function reset(val) {
   chrome.storage.sync.set({
     dialalt10: "https://twitter.com"
   }, function() {});
+  	chrome.storage.sync.set({
+	backgroundURL: ""
+}, function() {})
   if (val != "true") {
     setTimeout(reload, 200);
   } else {
@@ -543,6 +546,9 @@ function reset(val) {
 
 function resettwo() {
   localStorage.file = "Reset";
+  	chrome.storage.sync.set({
+	backgroundURL: ""
+}, function() {})
   onsubmitModifier();
 }
 
@@ -683,10 +689,18 @@ chrome.storage.sync.set({
 
 });
 //background image
+
 var backgroundNumber = 0;
 
+var backgroundURL = "";
+chrome.storage.sync.get(['backgroundURL'], function(result) {
+	backgroundURL = result.backgroundURL;
+	console.log(result);
+});
+
+
 function backgroundImage() {
-  if (localStorage.api == "false") {
+  if (localStorage.api == "false" && backgroundURL == "") {
     if (localStorage.file != "Reset" && localStorage.file != "null") {
       file = JSON.parse(localStorage.file);
       document.getElementById('bg').style.backgroundImage = "url(" + file[backgroundNumber] + ")";
@@ -697,12 +711,15 @@ function backgroundImage() {
       }
       setTimeout(backgroundImage, localStorage.slideTimer * 60000);
     }
-  } else {
+  } else if (backgroundURL != ""){
+	  document.getElementById('bg').style.backgroundImage = "url(" + backgroundURL + ")";
+	  console.log("REE");
+  }else {
     document.getElementById('nasa').checked = "true";
     setTimeout(loadNasa, 100);
   }
 }
-backgroundImage();
+setTimeout(backgroundImage, 100);
 
 function loadNasa() {
   var client = new HttpClient();
@@ -716,7 +733,9 @@ var filecount = [];
 
 function slideshow() {
   if (document.getElementById("getval").files.length != 0 && localStorage.file != "Reset") {
-
+		chrome.storage.sync.set({
+	backgroundURL: ""
+}, function() {})
     console.log(slidecount);
     if (slidecount < document.getElementById("getval").files.length) {
       readURL(document.getElementById("getval").files[slidecount]);
@@ -734,6 +753,7 @@ function slideshow() {
     }
   } else if (localStorage.file == "Reset") {
     localStorage.file = "null";
+	localStorage.backgroundURL = "";
     setTimeout(reload, 200);
   } else {
     setTimeout(reload, 200);
