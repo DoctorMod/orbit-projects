@@ -15,6 +15,9 @@
     "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
-  "permissions": ["activeTab", "storage", "geolocation"],
+  "permissions": ["activeTab", "storage", "geolocation", "contextMenus"],
+  "background": {
+    "scripts": ["background.js"]
+  },
   "content_security_policy": "script-src 'self' https://rss.bloople.net; "
 }
