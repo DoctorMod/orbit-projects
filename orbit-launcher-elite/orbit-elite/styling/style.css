@@ -1075,13 +1075,13 @@ input:checked[type="radio"] + .sdBTN{
     font-size: 40px;
   }
 
-  .btn i, .btn span, .sdbtn i, .btn span {
+  .btn i, .btn span {
     line-height: 72.5px;
     font-size: 25px;
     animation: font-size-decrease-media 0.25s;
   }
 
-  .btn:hover i, .btn:hover span, .sdbtn:hover i, .sdbtn:hover span {
+  .btn:hover i, .btn:hover span {
     animation: font-size-increase-media 0.25s;
     animation-fill-mode: forwards;
   }
