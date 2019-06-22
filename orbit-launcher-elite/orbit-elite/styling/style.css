@@ -466,6 +466,27 @@ input[type="color"]::-webkit-color-swatch {
   }
 }
 
+@keyframes font-size-increase-media {
+  0% {
+    font-size: 25px;
+  }
+
+  100% {
+    font-size: 32px;
+  }
+}
+
+@keyframes font-size-decrease-media {
+  0% {
+    font-size: 32px;
+  }
+
+  100% {
+    font-size: 25px;
+  }
+}
+
+
 .btn::before {
   content: "";
   position: absolute;
@@ -1012,39 +1033,10 @@ input[type="color"]::-webkit-color-swatch {
   pointer-events: none;
 }
 
-@keyframes font-size-increase {
-  0% {
-    font-size: 25px;
-  }
-
-  100% {
-    font-size: 32.6px;
-  }
-}
-
-@keyframes font-size-decrease {
-  0% {
-    font-size: 32.6px;
-  }
-
-  100% {
-    font-size: 25px;
-  }
-}
-
 /* MAX WIDTH MEDIA QUERIES */
 @media screen and (max-width: 1200px) {
   h3 {
     font-size: 10px;
-  }
-
-  span, label {
-    font-size: 9.5px;
-  }
-
-  .btn i, .btn span {
-    line-height: 72.5px;
-    font-size: 25px;
   }
 
   #settingsOpen {
@@ -1070,6 +1062,21 @@ input[type="color"]::-webkit-color-swatch {
   .submit {
     font-size: 40px;
   }
+
+  .btn i, .btn span {
+    line-height: 72.5px;
+    font-size: 25px;
+    animation: font-size-decrease-media 0.25s;
+  }
+
+  .btn:hover i, .btn:hover span {
+    animation: font-size-increase-media 0.25s;
+    animation-fill-mode: forwards;
+  }
+
+  span, label {
+    font-size: 9.5px;
+  }
 }
 
 @media screen and (max-width: 950px) {
@@ -1080,6 +1087,7 @@ input[type="color"]::-webkit-color-swatch {
 
 /* MAX WIDTH MEDIA QUERIES END */
 /* MIN WIDTH MEDIA QUERIES */
+
 @media screen and (min-width: 1200px) {
   #settingsOpen {
     font-size: 35px;
