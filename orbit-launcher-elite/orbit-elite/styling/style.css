@@ -165,6 +165,21 @@ input[type="color"]::-webkit-color-swatch {
   border-radius: 100%;
 }
 
+/* Radio Buttons */
+
+input[type="radio"] {
+      -webkit-appearance: none;
+}
+
+input:checked[type="radio"] + .sdBTN{
+  background-color: #3498db;
+  color: #f1f1f1;
+  transform: scale(1.1);
+  animation: aaa 0.3s 1;
+}
+
+/* Radio Buttons */
+
 .sliderValue {
   position: relative;
   bottom: 7.5px;
@@ -1099,3 +1114,56 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 /* MIN WIDTH MEDIA QUERIES END */
+
+/* Speed Dial Value */
+
+#myBTN {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.sdSettingsMiddle {
+  width: 100%;
+}
+
+.sdbtn{
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    margin: 5px;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+.btn i, .btn span {
+  line-height: 7.25vw;
+  font-size: 2.125vw;
+  transition: 0.2s;
+  animation: font-size-decrease 0.25s;
+}
+
+.btn:hover i, .btn:hover span {
+  animation: font-size-increase 0.25s;
+  animation-fill-mode: forwards;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 120%;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
