@@ -448,7 +448,7 @@ function resetFunction() {
   if (confirm("Are you sure you want to reset?")) {
     reset();
   } else {
-	
+
   }
 }
 
@@ -470,7 +470,7 @@ function reset(val) {
   localStorage.submit = 'true';
   localStorage.dial = '5';
   localStorage.shape = 'true';
-  localStorage.temp = 'false'
+  localStorage.temp = 'true'
   localStorage.search = 'https://www.google.com/search?q=';
   localStorage.opacity = '0';
   localStorage.font = 'Concert One';
@@ -534,9 +534,9 @@ function reset(val) {
   chrome.storage.sync.set({
     dialalt10: "https://twitter.com"
   }, function() {});
-  	chrome.storage.sync.set({
-	backgroundURL: ""
-}, function() {})
+  chrome.storage.sync.set({
+    backgroundURL: ""
+  }, function() {})
   if (val != "true") {
     setTimeout(reload, 200);
   } else {
@@ -546,9 +546,9 @@ function reset(val) {
 
 function resettwo() {
   localStorage.file = "Reset";
-  	chrome.storage.sync.set({
-	backgroundURL: ""
-}, function() {})
+  chrome.storage.sync.set({
+    backgroundURL: ""
+  }, function() {})
   onsubmitModifier();
 }
 
@@ -694,8 +694,8 @@ var backgroundNumber = 0;
 
 var backgroundURL = "";
 chrome.storage.sync.get(['backgroundURL'], function(result) {
-	backgroundURL = result.backgroundURL;
-	console.log(result);
+  backgroundURL = result.backgroundURL;
+  console.log(result);
 });
 
 
@@ -711,10 +711,10 @@ function backgroundImage() {
       }
       setTimeout(backgroundImage, localStorage.slideTimer * 60000);
     }
-  } else if (backgroundURL != ""){
-	  document.getElementById('bg').style.backgroundImage = "url(" + backgroundURL + ")";
-	  console.log("REE");
-  }else {
+  } else if (backgroundURL != "") {
+    document.getElementById('bg').style.backgroundImage = "url(" + backgroundURL + ")";
+    console.log("REE");
+  } else {
     document.getElementById('nasa').checked = "true";
     setTimeout(loadNasa, 100);
   }
@@ -733,9 +733,9 @@ var filecount = [];
 
 function slideshow() {
   if (document.getElementById("getval").files.length != 0 && localStorage.file != "Reset") {
-		chrome.storage.sync.set({
-	backgroundURL: ""
-}, function() {})
+    chrome.storage.sync.set({
+      backgroundURL: ""
+    }, function() {})
     console.log(slidecount);
     if (slidecount < document.getElementById("getval").files.length) {
       readURL(document.getElementById("getval").files[slidecount]);
@@ -753,7 +753,7 @@ function slideshow() {
     }
   } else if (localStorage.file == "Reset") {
     localStorage.file = "null";
-	localStorage.backgroundURL = "";
+    localStorage.backgroundURL = "";
     setTimeout(reload, 200);
   } else {
     setTimeout(reload, 200);
