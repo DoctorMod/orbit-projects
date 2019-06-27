@@ -934,123 +934,144 @@ function SubWeather(icon, json) {
   }
 }
 //getting btn logo
+
+var mdial1 = document.getElementById("dial1");
+
+var mdial2 = document.getElementById("dial2");
+
+var mdial3 = document.getElementById("dial3");
+
+var mdial4 = document.getElementById("dial4");
+
+var mdial5 = document.getElementById("dial5");
+
+var mdial6 = document.getElementById("dial6");
+
+var mdial7 = document.getElementById("dial7");
+
+var mdial8 = document.getElementById("dial8");
+
+var mdial9 = document.getElementById("dial9");
+
+var mdial10 = document.getElementById("dial10");
+
 chrome.storage.sync.get(['dial1'], function(result) {
   if (result.dial1 == "mail") {
-    dial1.classList.add("fas", "fa-envelope");
+    mdial1.classList.add("fas", "fa-envelope");
   } else if (result.dial1.charAt(0) == "/") {
-    temp = dial1.id;
-    dial1.outerHTML = "<span id='" + dial1.id + "'>" + result.dial1.substr(1) + "</span>";
-    dial1 = document.getElementById(temp);
+    temp = mdial1.id;
+    mdial1.outerHTML = "<span id='" + dial1.id + "'>" + result.dial1.substr(1) + "</span>";
+    mdial1 = document.getElementById(temp);
   } else {
-    dial1.classList.add("fab", "fa-" + result.dial1);
+    mdial1.classList.add("fab", "fa-" + result.dial1);
   }
 });
 
 chrome.storage.sync.get(['dial2'], function(result) {
   if (result.dial2 == "mail") {
-    dial2.classList.add("fas", "fa-envelope");
+    mdial2.classList.add("fas", "fa-envelope");
   } else if (result.dial2.charAt(0) == "/") {
-    temp = dial2.id;
-    dial2.outerHTML = "<span id='" + dial2.id + "'>" + result.dial2.substr(1) + "</span>";
-    dial2 = document.getElementById(temp);
+    temp = mdial2.id;
+    mdial2.outerHTML = "<span id='" + dial2.id + "'>" + result.dial2.substr(1) + "</span>";
+    mdial2 = document.getElementById(temp);
   } else {
-    dial2.classList.add("fab", "fa-" + result.dial2);
+    mdial2.classList.add("fab", "fa-" + result.dial2);
   }
 });
 
 chrome.storage.sync.get(['dial3'], function(result) {
   if (result.dial3 == "mail") {
-    dial3.classList.add("fas", "fa-envelope");
+    mdial3.classList.add("fas", "fa-envelope");
   } else if (result.dial3.charAt(0) == "/") {
-    temp = dial3.id;
-    dial3.outerHTML = "<span id='" + dial3.id + "'>" + result.dial3.substr(1) + "</span>";
-    dial3 = document.getElementById(temp);
+    temp = mdial3.id;
+    mdial3.outerHTML = "<span id='" + dial3.id + "'>" + result.dial3.substr(1) + "</span>";
+    mdial3 = document.getElementById(temp);
   } else {
-    dial3.classList.add("fab", "fa-" + result.dial3);
+    mdial3.classList.add("fab", "fa-" + result.dial3);
   }
 });
 
 chrome.storage.sync.get(['dial4'], function(result) {
   if (result.dial4 == "mail") {
-    dial4.classList.add("fas", "fa-envelope");
+    mdial4.classList.add("fas", "fa-envelope");
   } else if (result.dial4.charAt(0) == "/") {
-    temp = dial4.id;
-    dial4.outerHTML = "<span id='" + dial4.id + "'>" + result.dial4.substr(1) + "</span>";
-    dial4 = document.getElementById(temp);
+    temp = mdial4.id;
+    mdial4.outerHTML = "<span id='" + dial4.id + "'>" + result.dial4.substr(1) + "</span>";
+    mdial4 = document.getElementById(temp);
   } else {
-    dial4.classList.add("fab", "fa-" + result.dial4);
+    mdial4.classList.add("fab", "fa-" + result.dial4);
   }
 });
 
 chrome.storage.sync.get(['dial5'], function(result) {
   if (result.dial5 == "mail") {
-    dial5.classList.add("fas", "fa-envelope");
+    mdial5.classList.add("fas", "fa-envelope");
   } else if (result.dial5.charAt(0) == "/") {
-    temp = dial5.id;
-    dial5.outerHTML = "<span id='" + dial5.id + "'>" + result.dial5.substr(1) + "</span>";
-    dial5 = document.getElementById(temp);
+    temp = mdial5.id;
+    mdial5.outerHTML = "<span id='" + dial5.id + "'>" + result.dial5.substr(1) + "</span>";
+    mdial5 = document.getElementById(temp);
   } else {
-    dial5.classList.add("fab", "fa-" + result.dial5);
+    mdial5.classList.add("fab", "fa-" + result.dial5);
   }
 });
 
 chrome.storage.sync.get(['dial6'], function(result) {
   if (result.dial6 == "mail") {
-    dial6.classList.add("fas", "fa-envelope");
+    mdial6.classList.add("fas", "fa-envelope");
   } else if (result.dial6.charAt(0) == "/") {
-    temp = dial6.id;
-    dial6.outerHTML = "<span id='" + dial6.id + "'>" + result.dial6.substr(1) + "</span>";
-    dial6 = document.getElementById(temp);
+    temp = mdial6.id;
+    mdial6.outerHTML = "<span id='" + dial6.id + "'>" + result.dial6.substr(1) + "</span>";
+    mdial6 = document.getElementById(temp);
   } else {
-    dial6.classList.add("fab", "fa-" + result.dial6);
+    mdial6.classList.add("fab", "fa-" + result.dial6);
   }
 });
 
 chrome.storage.sync.get(['dial7'], function(result) {
   if (result.dial7 == "mail") {
-    dial7.classList.add("fas", "fa-envelope");
+    mdial7.classList.add("fas", "fa-envelope");
   } else if (result.dial7.charAt(0) == "/") {
-    temp = dial7.id;
-    dial7.outerHTML = "<span id='" + dial7.id + "'>" + result.dial7.substr(1) + "</span>";
-    dial7 = document.getElementById(temp);
+    temp = mdial7.id;
+    mdial7.outerHTML = "<span id='" + dial7.id + "'>" + result.dial7.substr(1) + "</span>";
+    mdial7 = document.getElementById(temp);
   } else {
-    dial7.classList.add("fab", "fa-" + result.dial7);
+    mdial7.classList.add("fab", "fa-" + result.dial7);
   }
 });
 
 chrome.storage.sync.get(['dial8'], function(result) {
   if (result.dial8 == "mail") {
-    dial8.classList.add("fas", "fa-envelope");
+    mdial8.classList.add("fas", "fa-envelope");
   } else if (result.dial8.charAt(0) == "/") {
-    temp = dial8.id;
-    dial8.outerHTML = "<span id='" + dial8.id + "'>" + result.dial8.substr(1) + "</span>";
-    dial8 = document.getElementById(temp);
+    temp = mdial8.id;
+    mdial8.outerHTML = "<span id='" + dial8.id + "'>" + result.dial8.substr(1) + "</span>";
+    mdial8 = document.getElementById(temp);
   } else {
-    dial8.classList.add("fab", "fa-" + result.dial8);
+    mdial8.classList.add("fab", "fa-" + result.dial8);
   }
 });
 
 chrome.storage.sync.get(['dial9'], function(result) {
   if (result.dial9 == "mail") {
-    dial9.classList.add("fas", "fa-envelope");
+    mdial9.classList.add("fas", "fa-envelope");
   } else if (result.dial9.charAt(0) == "/") {
-    temp = dial9.id;
-    dial9.outerHTML = "<span id='" + dial9.id + "'>" + result.dial9.substr(1) + "</span>";
-    dial9 = document.getElementById(temp);
+    temp = mdial9.id;
+    mdial9.outerHTML = "<span id='" + dial9.id + "'>" + result.dial9.substr(1) + "</span>";
+    mdial9 = document.getElementById(temp);
   } else {
-    dial9.classList.add("fab", "fa-" + result.dial9);
+    mdial9.classList.add("fab", "fa-" + result.dial9);
   }
 });
 
 chrome.storage.sync.get(['dial10'], function(result) {
   if (result.dial10 == "mail") {
-    dial10.classList.add("fas", "fa-envelope");
+    mdial10.classList.add("fas", "fa-envelope");
   } else if (result.dial10.charAt(0) == "/") {
-    temp = dial10.id;
-    dial10.outerHTML = "<span id='" + dial10.id + "'>" + result.dial10.substr(1) + "</span>";
-    dial10 = document.getElementById(temp);
+    temp = mdial10.id;
+    mdial10.outerHTML = "<span id='" + dial10.id + "'>" + result.dial10.substr(1) + "</span>";
+    mdial10 = document.getElementById(temp);
   } else {
-    dial10.classList.add("fab", "fa-" + result.dial10);
+    mdial10.classList.add("fab", "fa-" + result.dial10);
   }
 });
 

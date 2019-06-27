@@ -1,27 +1,27 @@
-var dial1 = document.getElementById("Sdial1");
+var dial1 = document.getElementById("sdial1");
 
-var dial2 = document.getElementById("Sdial2");
+var dial2 = document.getElementById("sdial2");
 
-var dial3 = document.getElementById("Sdial3");
+var dial3 = document.getElementById("sdial3");
 
-var dial4 = document.getElementById("Sdial4");
+var dial4 = document.getElementById("sdial4");
 
-var dial5 = document.getElementById("Sdial5");
+var dial5 = document.getElementById("sdial5");
 
-var dial6 = document.getElementById("Sdial6");
+var dial6 = document.getElementById("sdial6");
 
-var dial7 = document.getElementById("Sdial7");
+var dial7 = document.getElementById("sdial7");
 
-var dial8 = document.getElementById("Sdial8");
+var dial8 = document.getElementById("sdial8");
 
-var dial9 = document.getElementById("Sdial9");
+var dial9 = document.getElementById("sdial9");
 
-var dial10 = document.getElementById("Sdial10");
+var dial10 = document.getElementById("sdial10");
 
 
 var target;
 
-var selected = document.getElementById("Sdial1");
+var selected = document.getElementById("sdial1");
 
 function runitem(value) {
   temp = selected.id;
@@ -33,7 +33,7 @@ function runitem(value) {
   } else {
     selected.classList.add("fab", "fa-" + value.target.value);
   }
-  if (selected.id == "Sdial1") {
+  if (selected.id == "sdial1") {
     chrome.storage.sync.set({
       dial1: value.target.value
     }, function() {
@@ -43,7 +43,7 @@ function runitem(value) {
       dialalt1: value.target.alt
     }, function() {});
 
-  } else if (selected.id == "Sdial2") {
+  } else if (selected.id == "sdial2") {
     chrome.storage.sync.set({
       dial2: value.target.value
     }, function() {});
@@ -52,7 +52,7 @@ function runitem(value) {
       dialalt2: value.target.alt
     }, function() {});
 
-  } else if (selected.id == "Sdial3") {
+  } else if (selected.id == "sdial3") {
     chrome.storage.sync.set({
       dial3: value.target.value
     }, function() {
@@ -64,7 +64,7 @@ function runitem(value) {
 
     });
 
-  } else if (selected.id == "Sdial4") {
+  } else if (selected.id == "sdial4") {
     chrome.storage.sync.set({
       dial4: value.target.value
     }, function() {
@@ -76,7 +76,7 @@ function runitem(value) {
 
     });
 
-  } else if (selected.id == "Sdial5") {
+  } else if (selected.id == "sdial5") {
     chrome.storage.sync.set({
       dial5: value.target.value
     }, function() {
@@ -85,7 +85,7 @@ function runitem(value) {
     chrome.storage.sync.set({
       dialalt6: value.target.alt
     }, function() {});
-  } else if (selected.id == "Sdial6") {
+  } else if (selected.id == "sdial6") {
     chrome.storage.sync.set({
       dial6: value.target.value
     }, function() {
@@ -94,7 +94,7 @@ function runitem(value) {
     chrome.storage.sync.set({
       dialalt6: value.target.alt
     }, function() {});
-  } else if (selected.id == "Sdial7") {
+  } else if (selected.id == "sdial7") {
     chrome.storage.sync.set({
       dial7: value.target.value
     }, function() {
@@ -103,7 +103,7 @@ function runitem(value) {
     chrome.storage.sync.set({
       dialalt7: value.target.alt
     }, function() {});
-  } else if (selected.id == "Sdial8") {
+  } else if (selected.id == "sdial8") {
     chrome.storage.sync.set({
       dial8: value.target.value
     }, function() {
@@ -112,7 +112,7 @@ function runitem(value) {
     chrome.storage.sync.set({
       dialalt8: value.target.alt
     }, function() {});
-  } else if (selected.id == "Sdial9") {
+  } else if (selected.id == "sdial9") {
     chrome.storage.sync.set({
       dial9: value.target.value
     }, function() {
@@ -121,7 +121,7 @@ function runitem(value) {
     chrome.storage.sync.set({
       dialalt9: value.target.alt
     }, function() {});
-  } else if (selected.id == "Sdial10") {
+  } else if (selected.id == "sdial10") {
     chrome.storage.sync.set({
       dial10: value.target.value
     }, function() {
@@ -135,7 +135,7 @@ function runitem(value) {
 
 function setselected(dial) {
   target = dial.target.id;
-  if (target == "Sdial10") {
+  if (target == "sdial10") {
     selected = document.getElementById(target);
   } else if (document.getElementById(target.slice(0, -1)) == null) {
     selected = document.getElementById(target);
@@ -155,56 +155,56 @@ function customSelect() {
   temp = selected.id;
   selected.outerHTML = "<span id='" + selected.id + "'>" + document.getElementById('Display').value + "</span>";
   selected = document.getElementById(temp);
-  if (selected.id == "Sdial1") {
+  if (selected.id == "sdial1") {
     chrome.storage.sync.set({
       dial1: "/" + document.getElementById('Display').value
     }, function() {})
     chrome.storage.sync.set({
       dialalt1: url
     }, function() {})
-  } else if (selected.id == "Sdial2") {
+  } else if (selected.id == "sdial2") {
     chrome.storage.sync.set({
       dial2: "/" + document.getElementById('Display').value
     }, function() {})
     chrome.storage.sync.set({
       dialalt2: url
     }, function() {})
-  } else if (selected.id == "Sdial3") {
+  } else if (selected.id == "sdial3") {
     chrome.storage.sync.set({
       dial3: "/" + document.getElementById('Display').value
     }, function() {})
     chrome.storage.sync.set({
       dialalt3: url
     }, function() {})
-  } else if (selected.id == "Sdial4") {
+  } else if (selected.id == "sdial4") {
     chrome.storage.sync.set({
       dial4: "/" + document.getElementById('Display').value
     }, function() {})
     chrome.storage.sync.set({
       dialalt4: url
     }, function() {})
-  } else if (selected.id == "Sdial5") {
+  } else if (selected.id == "sdial5") {
     chrome.storage.sync.set({
       dial5: "/" + document.getElementById('Display').value
     }, function() {})
     chrome.storage.sync.set({
       dialalt6: url
     }, function() {})
-  } else if (selected.id == "Sdial6") {
+  } else if (selected.id == "sdial6") {
     chrome.storage.sync.set({
       dial6: "/" + document.getElementById('Display').value
     }, function() {})
     chrome.storage.sync.set({
       dialalt6: url
     }, function() {})
-  } else if (selected.id == "Sdial7") {
+  } else if (selected.id == "sdial7") {
     chrome.storage.sync.set({
       dial7: "/" + document.getElementById('Display').value
     }, function() {})
     chrome.storage.sync.set({
       dialalt7: url
     }, function() {})
-  } else if (selected.id == "Sdial8") {
+  } else if (selected.id == "sdial8") {
     chrome.storage.sync.set({
       dial8: "/" + document.getElementById('Display').value
     }, function() {})
@@ -213,14 +213,14 @@ function customSelect() {
     }, function() {
       console.log(url);
     })
-  } else if (selected.id == "Sdial9") {
+  } else if (selected.id == "sdial9") {
     chrome.storage.sync.set({
       dial9: "/" + document.getElementById('Display').value
     }, function() {})
     chrome.storage.sync.set({
       dialalt9: url
     }, function() {})
-  } else if (selected.id == "Sdial10") {
+  } else if (selected.id == "sdial10") {
     chrome.storage.sync.set({
       dial10: "/" + document.getElementById('Display').value
     }, function() {})
@@ -253,16 +253,16 @@ document.getElementById("amazon").addEventListener("click", runitem);
 document.getElementById("patreon").addEventListener("click", runitem);
 document.getElementById("nintendo").addEventListener("click", runitem);
 
-document.getElementById("Sdial1p").addEventListener("click", setselected);
-document.getElementById("Sdial2p").addEventListener("click", setselected);
-document.getElementById("Sdial3p").addEventListener("click", setselected);
-document.getElementById("Sdial4p").addEventListener("click", setselected);
-document.getElementById("Sdial5p").addEventListener("click", setselected);
-document.getElementById("Sdial6p").addEventListener("click", setselected);
-document.getElementById("Sdial7p").addEventListener("click", setselected);
-document.getElementById("Sdial8p").addEventListener("click", setselected);
-document.getElementById("Sdial9p").addEventListener("click", setselected);
-document.getElementById("Sdial10p").addEventListener("click", setselected);
+document.getElementById("sdial1p").addEventListener("click", setselected);
+document.getElementById("sdial2p").addEventListener("click", setselected);
+document.getElementById("sdial3p").addEventListener("click", setselected);
+document.getElementById("sdial4p").addEventListener("click", setselected);
+document.getElementById("sdial5p").addEventListener("click", setselected);
+document.getElementById("sdial6p").addEventListener("click", setselected);
+document.getElementById("sdial7p").addEventListener("click", setselected);
+document.getElementById("sdial8p").addEventListener("click", setselected);
+document.getElementById("sdial9p").addEventListener("click", setselected);
+document.getElementById("sdial10p").addEventListener("click", setselected);
 
 document.getElementById("SubButton").addEventListener("click", customSelect);
 
