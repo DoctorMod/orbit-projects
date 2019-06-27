@@ -172,10 +172,7 @@ input[type="radio"] {
 }
 
 input:checked[type="radio"] + .sdBTN{
-  background-color: #3498db;
-  color: #f1f1f1;
   transform: scale(1.1);
-  animation: aaa 0.3s 1;
 }
 
 /* Radio Buttons */
@@ -824,6 +821,7 @@ input:checked[type="radio"] + .sdBTN{
   width: 15vw;
   height: 90vh;
   z-index: -1;
+  border-radius: 5px 5px 0px 0px;
   border-radius: 0px;
   overflow:visible;
   margin: none;
@@ -1124,13 +1122,15 @@ input:checked[type="radio"] + .sdBTN{
 }
 
 .sdSettingsMiddle {
-  width: 100%;
+  text-align: center;
 }
 
 .sdbtn{
     display: inline-block;
-    width: 90px;
-    height: 90px;
+    height: 7vw;
+    width: 7vw;
+    min-width: 72.5px;
+    min-height: 72.5px;
     margin: 5px;
     border-radius: 30%;
     box-shadow: 0 5px 15px -5px #00000070;
@@ -1139,19 +1139,19 @@ input:checked[type="radio"] + .sdBTN{
     z-index: 0;
 }
 
-.btn i, .btn span {
+.sdbtn i, .btn span {
   line-height: 7.25vw;
   font-size: 2.125vw;
   transition: 0.2s;
   animation: font-size-decrease 0.25s;
 }
 
-.btn:hover i, .btn:hover span {
+.sdbtn:hover i, .sdbtn:hover span {
   animation: font-size-increase 0.25s;
   animation-fill-mode: forwards;
 }
 
-.btn::before {
+.sdbtn::before {
   content: "";
   position: absolute;
   width: 120%;
@@ -1162,7 +1162,7 @@ input:checked[type="radio"] + .sdBTN{
   z-index: -1;
 }
 
-.btn:hover::before {
+.sdbtn:hover::before {
   animation: aaa 0.7s 1;
   top: -10%;
   left: -10%;
