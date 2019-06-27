@@ -464,7 +464,18 @@
               <label class="accentCol">12 Hour Clock</label>
           </div>
         </div>
-        <div class="settingsBottomSheet">
+        <div id="myModal" class="modal">
+          <div class="modal-content backgroundCol">
+            <span id="modalClose" class="accentCol">&times;</span>
+            <div>
+              <a class="btn"><span id="text"></span></a>
+              <h2 id="mTitle" class="accentCol"></h2>
+              <p id="mContent" class="accentCol"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="settingsBottomSheet">
           <label class="NoTop">
             <input class="accentCol backgroundCol button" id="DoneClose" type="submit" value="Done">
             <link class="rippleJS fill">
@@ -477,18 +488,7 @@
             <input class="accentCol backgroundCol button" id="CancelClose" type="submit" value="Cancel">
             <link class="rippleJS fill">
           </label>
-        </div>
-        <div id="myModal" class="modal">
-          <div class="modal-content backgroundCol">
-            <span id="modalClose" class="accentCol">&times;</span>
-            <div>
-              <a class="btn"><span id="text"></span></a>
-              <h2 id="mTitle" class="accentCol"></h2>
-              <p id="mContent" class="accentCol"></p>
-            </div>
-          </div>
-        </div>
-      </div>
+        </div>        
       <!--Leave This Here PLS-->
       <div class="RSS sideBackground" id="RssSide">
         <a href="javascript:void(0)" class="closebtn sideAccent hoverRotate" id="rssClose">&times;</a>
