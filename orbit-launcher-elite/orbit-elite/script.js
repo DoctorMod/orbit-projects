@@ -695,7 +695,6 @@ var backgroundNumber = 0;
 var backgroundURL = "";
 chrome.storage.sync.get(['backgroundURL'], function(result) {
   backgroundURL = result.backgroundURL;
-  console.log(result);
 });
 
 

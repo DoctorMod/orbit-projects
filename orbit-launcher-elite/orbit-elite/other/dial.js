@@ -210,9 +210,7 @@ function customSelect() {
     }, function() {})
     chrome.storage.sync.set({
       dialalt8: url
-    }, function() {
-      console.log(url);
-    })
+    }, function() {})
   } else if (selected.id == "sdial9") {
     chrome.storage.sync.set({
       dial9: "/" + document.getElementById('Display').value
@@ -275,7 +273,6 @@ chrome.storage.sync.get(['dial1'], function(result) {
     dial1 = document.getElementById(temp);
   } else {
     dial1.classList.add("fab", "fa-" + result.dial1);
-    console.log(dial1);
   }
 });
 
@@ -325,7 +322,6 @@ chrome.storage.sync.get(['dial5'], function(result) {
   } else {
     dial5.classList.add("fab", "fa-" + result.dial5);
   }
-  console.log(result)
 });
 
 chrome.storage.sync.get(['dial6'], function(result) {
@@ -338,7 +334,7 @@ chrome.storage.sync.get(['dial6'], function(result) {
   } else {
     dial6.classList.add("fab", "fa-" + result.dial6);
   }
-  console.log(result)
+
 });
 
 chrome.storage.sync.get(['dial7'], function(result) {
@@ -351,7 +347,7 @@ chrome.storage.sync.get(['dial7'], function(result) {
   } else {
     dial7.classList.add("fab", "fa-" + result.dial7);
   }
-  console.log(result)
+
 });
 
 chrome.storage.sync.get(['dial8'], function(result) {
@@ -364,7 +360,7 @@ chrome.storage.sync.get(['dial8'], function(result) {
   } else {
     dial8.classList.add("fab", "fa-" + result.dial8);
   }
-  console.log(result)
+
 });
 
 chrome.storage.sync.get(['dial9'], function(result) {
@@ -377,7 +373,7 @@ chrome.storage.sync.get(['dial9'], function(result) {
   } else {
     dial9.classList.add("fab", "fa-" + result.dial9);
   }
-  console.log(result)
+
 });
 
 chrome.storage.sync.get(['dial10'], function(result) {
@@ -390,7 +386,7 @@ chrome.storage.sync.get(['dial10'], function(result) {
   } else {
     dial10.classList.add("fab", "fa-" + result.dial10);
   }
-  console.log(result)
+
 });
 
 var modal = document.getElementById('myModal');
