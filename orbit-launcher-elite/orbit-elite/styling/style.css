@@ -821,6 +821,7 @@ input:checked[type="radio"] + .sdBTN{
   width: 15vw;
   height: 90vh;
   z-index: -1;
+  border-radius: 5px 5px 0px 0px;
   border-radius: 0px;
   overflow:visible;
   margin: none;
@@ -1121,7 +1122,7 @@ input:checked[type="radio"] + .sdBTN{
 }
 
 .sdSettingsMiddle {
-  width: 100%;
+  text-align: center;
 }
 
 .sdbtn{
