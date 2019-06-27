@@ -289,59 +289,61 @@
 
             <div class="sdSettingsMiddle">
               <label><input type="radio" name="Type" checked>
-                <a id="dial1p" class="accentCol backgroundCol sdbtn">
-                  <i id="dial1"></i>
+                <a id="sdial1p" class="accentCol backgroundCol sdbtn">
+                  <i id="sdial1"></i>
                 </a>
                 </input></label>
               <label><input type="radio" name="Type">
-                <a id="dial2p" class="accentCol backgroundCol sdbtn">
-                  <i id="dial2"></i>
+                <a id="sdial2p" class="accentCol backgroundCol sdbtn">
+                  <i id="sdial2"></i>
                 </a>
                 </input></label>
               <label><input type="radio" name="Type">
-                <a id="dial3p" class="accentCol backgroundCol sdbtn">
-                  <i id="dial3"></i>
+                <a id="sdial3p" class="accentCol backgroundCol sdbtn">
+                  <i id="sdial3"></i>
                 </a>
                 </input></label>
               <label><input type="radio" name="Type">
-                <a id="dial4p" class="accentCol backgroundCol sdbtn">
-                  <i id="dial4"></i>
+                <a id="sdial4p" class="accentCol backgroundCol sdbtn">
+                  <i id="sdial4"></i>
                 </a>
                 </input></label>
               <label><input type="radio" name="Type">
-                <a id="dial5p" class="accentCol backgroundCol sdbtn">
-                  <i id="dial5" class=""></i>
+                <a id="sdial5p" class="accentCol backgroundCol sdbtn">
+                  <i id="sdial5" class=""></i>
                 </a>
                 </input></label>
               <br>
               <div>
                 <label><input type="radio" name="Type">
-                  <a id="dial6p" class="accentCol backgroundCol sdbtn">
-                    <i id="dial6" class=""></i>
+
+                  <a id="sdial6p" class="accentCol backgroundCol sdbtn">
+                    <i id="sdial6" class=""></i>
                   </a>
                   </input></label>
 
                 <label><input type="radio" name="Type">
-                  <a id="dial7p" class="accentCol backgroundCol sdbtn">
-                    <i id="dial7" class=""></i>
+                  <a id="sdial7p" class="accentCol backgroundCol sdbtn">
+                    <i id="sdial7" class=""></i>
                   </a>
                   </input></label>
 
                 <label><input type="radio" name="Type">
-                  <a id="dial8p" class="accentCol backgroundCol sdbtn">
-                    <i id="dial8" class=""></i>
+                  <a id="sdial8p" class="accentCol backgroundCol sdbtn">
+                    <i id="sdial8" class=""></i>
                   </a>
                   </input></label>
 
                 <label><input type="radio" name="Type">
-                  <a id="dial9p" class="accentCol backgroundCol sdbtn">
-                    <i id="dial9" class=""></i>
+
+                  <a id="sdial9p" class="accentCol backgroundCol sdbtn">
+                    <i id="sdial9" class=""></i>
                   </a>
                   </input></label>
 
                 <label><input type="radio" name="Type">
-                  <a id="dial10p" class="accentCol backgroundCol sdbtn">
-                    <i id="dial10" class=""></i>
+                  <a id="sdial10p" class="accentCol backgroundCol sdbtn">
+                    <i id="sdial10" class=""></i>
                   </a>
                   </input></label>
               </div>
@@ -392,8 +394,8 @@
                     <input class="button" id="SubButton" type="submit"></input>
                   </div>
                 </div>
-
               </div>
+            </div>
           </div>
         </div>
         <div class="SettingsSection" id="Widgetsettings">
@@ -429,7 +431,7 @@
               <h3 class="accentCol">Weather Celsius/Fahrenheit</h3>
               <div id="weatherOptions">
                 <label class="accentCol">C</label>
-                <label class="NoTop"><input type="checkbox" class="sideBackground" id="tempToggle">
+                <label class="NoTop"><input type="checkbox" class="sideBackground" id="tempToggle" checked>
                   <label class="accentCol">F</label>
               </div>
             </div>
@@ -462,52 +464,49 @@
               <label class="accentCol">12 Hour Clock</label>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="settingsBottomSheet">
-      <label class="NoTop">
-        <input class="accentCol backgroundCol button" id="DoneClose" type="submit" value="Done">
-        <link class="rippleJS fill">
-      </label>
-      <label class="NoTop">
-        <button type="button" class="accentCol backgroundCol button textButton fas fa-redo-alt" id="reset"> </button>
-        <link class="rippleJS fill">
-      </label>
-      <label class="NoTop">
-        <input class="accentCol backgroundCol button" id="CancelClose" type="submit" value="Cancel">
-        <link class="rippleJS fill">
-      </label>
-    </div>
-    <div id="myModal" class="modal">
-      <div class="modal-content backgroundCol">
-        <span id="modalClose" class="accentCol">&times;</span>
-        <div>
-          <a class="btn"><span id="text"></span></a>
-          <h2 id="mTitle" class="accentCol"></h2>
-          <p id="mContent" class="accentCol"></p>
+        <div class="settingsBottomSheet">
+          <label class="NoTop">
+            <input class="accentCol backgroundCol button" id="DoneClose" type="submit" value="Done">
+            <link class="rippleJS fill">
+          </label>
+          <label class="NoTop">
+            <button type="button" class="accentCol backgroundCol button textButton fas fa-redo-alt" id="reset"> </button>
+            <link class="rippleJS fill">
+          </label>
+          <label class="NoTop">
+            <input class="accentCol backgroundCol button" id="CancelClose" type="submit" value="Cancel">
+            <link class="rippleJS fill">
+          </label>
+        </div>
+        <div id="myModal" class="modal">
+          <div class="modal-content backgroundCol">
+            <span id="modalClose" class="accentCol">&times;</span>
+            <div>
+              <a class="btn"><span id="text"></span></a>
+              <h2 id="mTitle" class="accentCol"></h2>
+              <p id="mContent" class="accentCol"></p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <!--Leave This Here PLS-->
-  <div class="RSS sideBackground" id="RssSide">
-    <a href="javascript:void(0)" class="closebtn sideAccent hoverRotate" id="rssClose">&times;</a>
-    <div class="sideAccent" style="font-size:10px;position:absolute;top:30px;right:0px;">Close</div>
-    <h6 class="sideAccent">RSS Feed</h6>
-    <label class="NoTop">
-      <input type="input" id="rssURL" class="accentCol backgroundCol button">
-      <link class="rippleJS fill"></label>
-    <script id="RSSFEED"></script>
-    <script src="other/ripple/ripple.js"></script>
-    <script src="script.js"></script>
-    <div id="ScriptLoader"></div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-  </div>
+      <!--Leave This Here PLS-->
+      <div class="RSS sideBackground" id="RssSide">
+        <a href="javascript:void(0)" class="closebtn sideAccent hoverRotate" id="rssClose">&times;</a>
+        <div class="sideAccent" style="font-size:10px;position:absolute;top:30px;right:0px;">Close</div>
+        <h6 class="sideAccent">RSS Feed</h6>
+        <label class="NoTop">
+          <input type="input" id="rssURL" class="accentCol backgroundCol button">
+          <link class="rippleJS fill"></label>
+        <script id="RSSFEED"></script>
+        <script src="other/ripple/ripple.js"></script>
+        <script src="script.js"></script>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+      </div>
 </body>
 
 </html>
