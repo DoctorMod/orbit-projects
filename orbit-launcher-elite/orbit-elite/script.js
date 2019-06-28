@@ -432,7 +432,7 @@ function checkSlider() {
 checkSlider();
 */
 //Check Reset
-
+/*
 function resetFunction() {
   if (confirm("Are you sure you want to reset?")) {
     reset();
@@ -584,6 +584,7 @@ function reload() {
     window.location = "index.html";
   }
 }
+*/
 //Color picker
 document.getElementById("background").value = localStorage.background;
 document.getElementById("accent").value = localStorage.accent;
