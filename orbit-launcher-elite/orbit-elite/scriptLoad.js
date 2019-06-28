@@ -11,8 +11,8 @@ loadfile("other/ripple/ripple.js","JS");
 //Temp
 loadfile("script.js","JS");
 //
-loadfile("OnInstall.js","JS");
-
+loadfile("scripts/OnInstall.js","JS");
+loadfile("scripts/TimeDate.js","JS");
 //Info
 
 console.log("Current Version: " + localStorage.version);

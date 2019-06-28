@@ -26,7 +26,7 @@ if (currVersion != prevVersion) {
   }
   localStorage.updateVersion = currVersion;
 }
-*/
+
 //show Time
 
 function showTime() {
@@ -126,7 +126,7 @@ function showDate() {
 //run Date & Time
 showTime();
 showDate();
-
+*/
 //adding EventListener
 document.getElementById("todoOpen").addEventListener("click", function() {
   setTimeout(function() {
