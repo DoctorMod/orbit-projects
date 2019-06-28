@@ -218,7 +218,7 @@ window.onclick = function(event) {
 }
 
 //settings
-
+/*
 if (window.location.hash == "#settings") {
   document.getElementById("Settings").style.width = "100%";
 }
@@ -266,7 +266,7 @@ function funcSettingsOpenStart(label) {
   target.style.background = localStorage.accent;
   document.getElementById(target.id.slice(4)).style.display = "block";
 }
-
+*/
 //todolist
 if (localStorage.storedList) {
   loadList();
