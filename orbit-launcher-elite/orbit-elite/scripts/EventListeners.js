@@ -51,3 +51,23 @@ document.getElementById("weatherClose").addEventListener("click", function() {
 document.getElementById("CancelClose").addEventListener('click', reload);
 document.getElementById("reset").addEventListener('click', resetFunction);
 document.getElementById("resetbk").addEventListener('click', resettwo);
+
+//open and close
+
+function sideStuffOpenAnim(isMe) {
+  document.getElementById(isMe).classList.add('sideWays');
+  document.getElementById(isMe).classList.remove('sideWaysClose');
+}
+
+function sideStuffOpen(side) {
+  document.getElementById(side).style.width = "250px";
+}
+
+function sideStuffClose(side) {
+  document.getElementById(side).style.width = "0";
+}
+
+function sideCloseAnim(isMe) {
+  document.getElementById(isMe).classList.remove('sideWays');
+  document.getElementById(isMe).classList.add('sideWaysClose');
+}

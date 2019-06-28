@@ -268,6 +268,7 @@ function funcSettingsOpenStart(label) {
 }
 */
 //todolist
+/*
 if (localStorage.storedList) {
   loadList();
 }
@@ -326,12 +327,6 @@ function checkEnterT(key) {
   }
 }
 
-function checkEnterR(key) {
-  var key = key.keyCode;
-  if (key == 13) {
-    Rss();
-  }
-}
 //open and close
 
 function sideStuffOpenAnim(isMe) {
@@ -351,7 +346,8 @@ function sideCloseAnim(isMe) {
   document.getElementById(isMe).classList.remove('sideWays');
   document.getElementById(isMe).classList.add('sideWaysClose');
 }
-
+*/
+/*
 //Stuff Enabled?
 if (localStorage.submit == "false") {
   document.getElementById("globe").remove();
@@ -394,9 +390,9 @@ if (localStorage.dialToggle == "false") {
 } else {
   document.getElementById("dialCheck").checked = true;
 }
-
+*/
 //Order Widgets.
-
+/*
 
 
 //Speed Dials
@@ -434,6 +430,7 @@ function checkSlider() {
   setTimeout(checkSlider, 100);
 }
 checkSlider();
+*/
 //Check Reset
 
 function resetFunction() {
@@ -787,6 +784,12 @@ document.getElementById('blurRange').value = localStorage.blur;
 document.getElementById('searchForm').action = localStorage.search;
 document.getElementById('SearchEngine').value = localStorage.search;
 //RSS Feeds
+function checkEnterR(key) {
+  var key = key.keyCode;
+  if (key == 13) {
+    Rss();
+  }
+}
 
 function Rss() {
   if (document.getElementById('rssURL').value.charAt(6) == "/") {

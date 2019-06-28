@@ -15,6 +15,8 @@ loadfile("scripts/OnInstall.js","JS");
 loadfile("scripts/TimeDate.js","JS");
 loadfile("scripts/EventListeners.js", "JS");
 loadfile("scripts/settings.js", "JS");
+loadfile("scripts/todolist.js", "JS");
+loadfile("scripts/Enabled.js", "JS");
 //Info
 
 console.log("Current Version: " + localStorage.version);
