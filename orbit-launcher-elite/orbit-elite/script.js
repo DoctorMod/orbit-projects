@@ -1,4 +1,4 @@
-//Activates First Run
+/*Activates First Run
 
 
 function onInstall() {
@@ -14,7 +14,6 @@ function getVersion() {
   var details = chrome.app.getDetails();
   return details.version;
 }
-
 // Check if the version has changed.
 var currVersion = getVersion();
 var prevVersion = localStorage.updateVersion;
@@ -27,7 +26,7 @@ if (currVersion != prevVersion) {
   }
   localStorage.updateVersion = currVersion;
 }
-
+*/
 //show Time
 
 function showTime() {
@@ -1134,7 +1133,7 @@ chrome.storage.sync.get(['dialalt10'], function(result) {
   }
 });
 
-//Updates & install
+/*Updates & install
 function firstRun() {
   chrome.runtime.setUninstallURL("https://orbitelite.github.io/uninstall.html");
   if (localStorage.firstinstall != "true") {
@@ -1173,10 +1172,4 @@ function firstRun() {
     localStorage.dialToggle = "true";
   }
 }
-// console.logs
-
-console.log("Current Version: " + localStorage.version);
-console.log("Current Background Hex: " + localStorage.background);
-console.log("Current Accent Hex: " + localStorage.accent);
-console.log("Current Font: " + localStorage.font);
-console.log("Current Number Of Speed Dials: " + localStorage.dial);
+*/

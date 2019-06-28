@@ -8,4 +8,15 @@ function loadfile(filename, filetype){
     }
 loadfile("scripts/dial.js","JS");
 loadfile("other/ripple/ripple.js","JS");
+//Temp
 loadfile("script.js","JS");
+//
+loadfile("OnInstall.js","JS");
+
+//Info
+
+console.log("Current Version: " + localStorage.version);
+console.log("Current Background Hex: " + localStorage.background);
+console.log("Current Accent Hex: " + localStorage.accent);
+console.log("Current Font: " + localStorage.font);
+console.log("Current Number Of Speed Dials: " + localStorage.dial);
