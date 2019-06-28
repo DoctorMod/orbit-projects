@@ -585,6 +585,7 @@ function reload() {
   }
 }
 */
+/*
 //Color picker
 document.getElementById("background").value = localStorage.background;
 document.getElementById("accent").value = localStorage.accent;
@@ -621,7 +622,7 @@ var t = document.createTextNode(".btn::before {background: " + localStorage.acce
   ";}");
 x.appendChild(t);
 document.head.appendChild(x);
-
+*/
 //Button Ripple
 
 
