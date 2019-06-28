@@ -19,6 +19,7 @@ loadfile("scripts/todolist.js", "JS");
 loadfile("scripts/Enabled.js", "JS");
 loadfile("scripts/resetSubmit.js", "JS");
 loadfile("scripts/color.js", "JS");
+loadfile("scripts/backgroundImage.js","JS");
 //Info
 
 console.log("Current Version: " + localStorage.version);

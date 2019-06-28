@@ -625,7 +625,7 @@ document.head.appendChild(x);
 */
 //Button Ripple
 
-
+/*
 //Color picker stuffes
 var accentVal;
 var backgroundVal;
@@ -679,6 +679,8 @@ chrome.storage.sync.set({
 }, function() {
 
 });
+*/
+/*
 //background image
 
 var backgroundNumber = 0;
@@ -781,7 +783,7 @@ function visualFile() {
 document.getElementById('bg').style.filter = "blur(" + localStorage.blur + "px)";
 document.getElementById('blurRange').value = localStorage.blur;
 
-
+*/
 //getting btn data
 document.getElementById('searchForm').action = localStorage.search;
 document.getElementById('SearchEngine').value = localStorage.search;
