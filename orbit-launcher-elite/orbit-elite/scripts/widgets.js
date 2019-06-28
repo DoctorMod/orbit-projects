@@ -15,9 +15,10 @@ function Rss() {
   location.reload();
 }
 weatherStart();
-setTimeout(load2sec, 1000);
+load2sec();
 
 function load2sec() {
+try {
   for (var i = 0; i < document.getElementsByClassName('feed-item-desc').length; i++) {
     document.getElementsByClassName('feed-item-desc')[i].style.color = localStorage.background;
   }
@@ -25,6 +26,9 @@ function load2sec() {
     document.getElementsByClassName('feed-item-title')[i].style.color = localStorage.background;
   }
   document.getElementsByClassName('feed-title')[0].firstChild.style.color = localStorage.background;
+} catch (e) {
+  setTimeout(load2sec, 200);
+}
 }
 
 document.getElementById('RSSFEED').src = localStorage.rss;
@@ -113,4 +117,13 @@ var HttpClient = function() {
     anHttpRequest.send(null);
   }
 }
-*/
+
+function SubWeather(icon, json) {
+  if (localStorage.sub == "Weather") {
+    if (localStorage.temp == "true") {
+      document.getElementById('MiscText').innerHTML = "<span style='color:" + localStorage.accent + ";'>" + "<i style='color:" + localStorage.accent + ";' class='" + icon + "'></i> " + Math.round((Math.round(json.main.temp) * 9 / 5) + 32) + "&deg; and " + json.weather[0].main + "</span>";
+    } else {
+      document.getElementById('MiscText').innerHTML = "<span style='color:" + localStorage.accent + ";'>" + "<i style='color:" + localStorage.accent + ";' class='" + icon + "'></i> " + Math.round(json.main.temp) + "&deg; and " + json.weather[0].main + "</span>";
+    }
+  }
+}

@@ -16,16 +16,6 @@ if (localStorage.sub == "Quote") {
 
 }
 
-function SubWeather(icon, json) {
-  if (localStorage.sub == "Weather") {
-    if (localStorage.temp == "true") {
-      document.getElementById('MiscText').innerHTML = "<span style='color:" + localStorage.accent + ";'>" + "<i style='color:" + localStorage.accent + ";' class='" + icon + "'></i> " + Math.round((Math.round(json.main.temp) * 9 / 5) + 32) + "&deg; and " + json.weather[0].main + "</span>";
-    } else {
-      document.getElementById('MiscText').innerHTML = "<span style='color:" + localStorage.accent + ";'>" + "<i style='color:" + localStorage.accent + ";' class='" + icon + "'></i> " + Math.round(json.main.temp) + "&deg; and " + json.weather[0].main + "</span>";
-    }
-  }
-}
-
 //Modal
 
 if (localStorage.doModalNext == "true") {
@@ -58,4 +48,17 @@ window.onclick = function(event) {
     modal.remove();
     location.reload();
   }
+}
+
+//Transparency
+if (localStorage.opacity == null) {
+  localStorage.opactiy = 0;
+}
+document.getElementById('OpacitySliderRange').value = localStorage.opacity;
+if (localStorage.opacity.length == 1) {
+  localStorage.opacity = "0" + localStorage.opacity;
+}
+document.getElementById('inputBox').style.backgroundColor = "#FFFFFF" + localStorage.opacity.toString(16);
+for (i = 0; i < document.getElementsByClassName('btn').length; i++) {
+  document.getElementsByClassName('btn')[i].style.backgroundColor = "#FFFFFF" + localStorage.opacity.toString(16);
 }
