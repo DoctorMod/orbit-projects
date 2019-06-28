@@ -712,7 +712,6 @@ function backgroundImage() {
     }
   } else if (backgroundURL != "") {
     document.getElementById('bg').style.backgroundImage = "url(" + backgroundURL + ")";
-    console.log("REE");
   } else {
     document.getElementById('nasa').checked = "true";
     setTimeout(loadNasa, 100);
