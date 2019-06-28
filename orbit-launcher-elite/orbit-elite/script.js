@@ -1,4 +1,5 @@
-/*Activates First Run
+/*
+//Activates First Run
 
 
 function onInstall() {
@@ -126,9 +127,9 @@ function showDate() {
 //run Date & Time
 showTime();
 showDate();
-*/
 
-/*
+
+
 //adding EventListener
 document.getElementById("todoOpen").addEventListener("click", function() {
   setTimeout(function() {
@@ -182,7 +183,7 @@ document.getElementById("weatherClose").addEventListener("click", function() {
 document.getElementById("CancelClose").addEventListener('click', reload);
 document.getElementById("reset").addEventListener('click', resetFunction);
 document.getElementById("resetbk").addEventListener('click', resettwo);
-*/
+
 //Modal
 
 if (localStorage.doModalNext == "true") {
@@ -218,7 +219,7 @@ window.onclick = function(event) {
 }
 
 //settings
-/*
+
 if (window.location.hash == "#settings") {
   document.getElementById("Settings").style.width = "100%";
 }
@@ -266,9 +267,9 @@ function funcSettingsOpenStart(label) {
   target.style.background = localStorage.accent;
   document.getElementById(target.id.slice(4)).style.display = "block";
 }
-*/
+
 //todolist
-/*
+
 if (localStorage.storedList) {
   loadList();
 }
@@ -346,8 +347,8 @@ function sideCloseAnim(isMe) {
   document.getElementById(isMe).classList.remove('sideWays');
   document.getElementById(isMe).classList.add('sideWaysClose');
 }
-*/
-/*
+
+
 //Stuff Enabled?
 if (localStorage.submit == "false") {
   document.getElementById("globe").remove();
@@ -390,9 +391,9 @@ if (localStorage.dialToggle == "false") {
 } else {
   document.getElementById("dialCheck").checked = true;
 }
-*/
+
 //Order Widgets.
-/*
+
 
 
 //Speed Dials
@@ -430,9 +431,9 @@ function checkSlider() {
   setTimeout(checkSlider, 100);
 }
 checkSlider();
-*/
+
 //Check Reset
-/*
+
 function resetFunction() {
   if (confirm("Are you sure you want to reset?")) {
     reset();
@@ -584,8 +585,8 @@ function reload() {
     window.location = "index.html";
   }
 }
-*/
-/*
+
+
 //Color picker
 document.getElementById("background").value = localStorage.background;
 document.getElementById("accent").value = localStorage.accent;
@@ -622,10 +623,10 @@ var t = document.createTextNode(".btn::before {background: " + localStorage.acce
   ";}");
 x.appendChild(t);
 document.head.appendChild(x);
-*/
+
 //Button Ripple
 
-/*
+
 //Color picker stuffes
 var accentVal;
 var backgroundVal;
@@ -679,8 +680,8 @@ chrome.storage.sync.set({
 }, function() {
 
 });
-*/
-/*
+
+
 //background image
 
 var backgroundNumber = 0;
@@ -783,10 +784,13 @@ function visualFile() {
 document.getElementById('bg').style.filter = "blur(" + localStorage.blur + "px)";
 document.getElementById('blurRange').value = localStorage.blur;
 
-*/
+
+
 //getting btn data
 document.getElementById('searchForm').action = localStorage.search;
 document.getElementById('SearchEngine').value = localStorage.search;
+
+
 //RSS Feeds
 function checkEnterR(key) {
   var key = key.keyCode;
@@ -930,6 +934,7 @@ function SubWeather(icon, json) {
     }
   }
 }
+
 //getting btn logo
 
 var mdial1 = document.getElementById("dial1");
@@ -1133,7 +1138,7 @@ chrome.storage.sync.get(['dialalt10'], function(result) {
   }
 });
 
-/*Updates & install
+Updates & install
 function firstRun() {
   chrome.runtime.setUninstallURL("https://orbitelite.github.io/uninstall.html");
   if (localStorage.firstinstall != "true") {

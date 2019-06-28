@@ -46,3 +46,7 @@ function funcSettingsOpenStart(label) {
   target.style.background = localStorage.accent;
   document.getElementById(target.id.slice(4)).style.display = "block";
 }
+
+//getting btn data
+document.getElementById('searchForm').action = localStorage.search;
+document.getElementById('SearchEngine').value = localStorage.search;
