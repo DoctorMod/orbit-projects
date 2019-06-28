@@ -127,6 +127,8 @@ function showDate() {
 showTime();
 showDate();
 */
+
+/*
 //adding EventListener
 document.getElementById("todoOpen").addEventListener("click", function() {
   setTimeout(function() {
@@ -180,7 +182,7 @@ document.getElementById("weatherClose").addEventListener("click", function() {
 document.getElementById("CancelClose").addEventListener('click', reload);
 document.getElementById("reset").addEventListener('click', resetFunction);
 document.getElementById("resetbk").addEventListener('click', resettwo);
-
+*/
 //Modal
 
 if (localStorage.doModalNext == "true") {
@@ -213,15 +215,6 @@ window.onclick = function(event) {
     modal.remove();
     location.reload();
   }
-}
-
-//testing dates
-if (localStorage.twelvehour === "true") {
-  document.getElementById("check").checked = true;
-}
-
-if (localStorage.dates === "true") {
-  document.getElementById("displaydate").checked = true;
 }
 
 //settings

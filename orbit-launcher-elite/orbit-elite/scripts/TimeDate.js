@@ -97,3 +97,12 @@ function showDate() {
 //run Date & Time
 showTime();
 showDate();
+
+//testing dates
+if (localStorage.twelvehour === "true") {
+  document.getElementById("check").checked = true;
+}
+
+if (localStorage.dates === "true") {
+  document.getElementById("displaydate").checked = true;
+}

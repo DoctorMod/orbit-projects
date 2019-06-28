@@ -13,6 +13,7 @@ loadfile("script.js","JS");
 //
 loadfile("scripts/OnInstall.js","JS");
 loadfile("scripts/TimeDate.js","JS");
+loadfile("scripts/EventListeners.js", "JS");
 //Info
 
 console.log("Current Version: " + localStorage.version);
