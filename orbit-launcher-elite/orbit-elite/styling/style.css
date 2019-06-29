@@ -821,6 +821,7 @@ input:checked[type="radio"] + .sdBTN{
   width: 15vw;
   height: 90vh;
   z-index: -1;
+  border-radius: 5px 5px 0px 0px;
   border-radius: 0px;
   overflow:visible;
   margin: none;
@@ -945,15 +946,14 @@ input:checked[type="radio"] + .sdBTN{
 #reset {
   box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
   border-radius: 100%;
-  width: 50px !important;
+  width: 35px !important;
   position: static;
-  height: 50px !important;
-  font-size: 20px;
+  height: 35px !important;
+  font-size: 15px;
 }
 
 #iReset {
-  position: relative;
-  right: 6px;
+  position: static;
   width: 0px;
   height: 0px;
   font-size: 15px !important;
@@ -1029,6 +1029,11 @@ input:checked[type="radio"] + .sdBTN{
   width: 33.33%;
 }
 
+.column2 {
+  float: left;
+  width: 50%;
+}
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -1037,7 +1042,8 @@ input:checked[type="radio"] + .sdBTN{
 }
 
 .SettingsSelection {
-  border-radius: 2px;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .mediaHide {
@@ -1089,6 +1095,16 @@ input:checked[type="radio"] + .sdBTN{
   span, label {
     font-size: 9.5px;
   }
+
+  .widgets .column {
+    float: none;
+    text-align: center;
+    width: auto;
+  }
+
+  .widgets {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 950px) {
@@ -1121,7 +1137,7 @@ input:checked[type="radio"] + .sdBTN{
 }
 
 .sdSettingsMiddle {
-  width: 100%;
+  text-align: center;
 }
 
 .sdbtn{

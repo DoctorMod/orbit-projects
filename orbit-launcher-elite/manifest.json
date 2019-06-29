@@ -4,7 +4,7 @@
   "name": "Orbit Newtab",
   "short_name": "Orbit",
   "description": "Give a clean and modern look to your default Chrome homepage",
-  "version": "1.7.1.1",
+  "version": "1.7.4",
   "chrome_url_overrides": {
     "newtab": "orbit-elite/index.html"
   },
