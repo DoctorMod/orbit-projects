@@ -8,9 +8,6 @@ function loadfile(filename, filetype){
     }
 loadfile("scripts/dial.js","JS");
 loadfile("other/ripple/ripple.js","JS");
-//Temp
-loadfile("script.js","JS");
-//
 loadfile("scripts/OnInstall.js","JS");
 loadfile("scripts/TimeDate.js","JS");
 loadfile("scripts/settings.js", "JS");
@@ -22,6 +19,7 @@ loadfile("scripts/backgroundImage.js","JS");
 loadfile("scripts/widgets.js","JS");
 loadfile("scripts/EventListeners.js", "JS");
 loadfile("scripts/speedDials.js","JS");
+loadfile("scripts/other.js","JS");
 loadfile("scripts/stuffBenWantsToDo.js","JS");
 //Info
 
