@@ -19,5 +19,5 @@
   "background": {
     "scripts": ["background.js"]
   },
-  "content_security_policy": "script-src 'self' https://rss.bloople.net; "
+  "content_security_policy": "script-src 'self' https://rss.bloople.net; object-src;"
 }
