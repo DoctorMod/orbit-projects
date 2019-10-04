@@ -7,9 +7,9 @@ function loadfile(filename, filetype){
         console.log("Loaded "+filename);
     }
 loadfile("scripts/resetSubmit.js", "JS");
+loadfile("scripts/OnInstall.js","JS");
 loadfile("scripts/dial.js","JS");
 loadfile("other/ripple/ripple.js","JS");
-loadfile("scripts/OnInstall.js","JS");
 loadfile("scripts/TimeDate.js","JS");
 loadfile("scripts/settings.js", "JS");
 loadfile("scripts/todolist.js", "JS");
