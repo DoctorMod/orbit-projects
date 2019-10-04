@@ -6,6 +6,7 @@ function loadfile(filename, filetype){
         document.getElementById('scriptLoader').appendChild(fileref);
         console.log("Loaded "+filename);
     }
+loadfile("scripts/resetSubmit.js", "JS");
 loadfile("scripts/dial.js","JS");
 loadfile("other/ripple/ripple.js","JS");
 loadfile("scripts/OnInstall.js","JS");
@@ -13,7 +14,6 @@ loadfile("scripts/TimeDate.js","JS");
 loadfile("scripts/settings.js", "JS");
 loadfile("scripts/todolist.js", "JS");
 loadfile("scripts/Enabled.js", "JS");
-loadfile("scripts/resetSubmit.js", "JS");
 loadfile("scripts/color.js", "JS");
 loadfile("scripts/backgroundImage.js","JS");
 loadfile("scripts/widgets.js","JS");
