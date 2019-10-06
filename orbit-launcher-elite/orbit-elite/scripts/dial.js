@@ -24,6 +24,7 @@ var target;
 var selected = document.getElementById("sdial1");
 
 function runitem(value) {
+  console.log("runItem");
   temp = selected.id;
   selected.outerHTML = "<i id='" + selected.id + "'></i>";
   selected = document.getElementById(temp);
@@ -228,28 +229,9 @@ function customSelect() {
   }
 }
 
-document.getElementById("facebook").addEventListener("click", runitem);
-document.getElementById("discord").addEventListener("click", runitem);
-document.getElementById("drive").addEventListener("click", runitem);
-document.getElementById("play").addEventListener("click", runitem);
-document.getElementById("linked").addEventListener("click", runitem);
-document.getElementById("pin").addEventListener("click", runitem);
-document.getElementById("reddit").addEventListener("click", runitem);
-document.getElementById("snap").addEventListener("click", runitem);
-document.getElementById("twitter").addEventListener("click", runitem);
-document.getElementById("youtube").addEventListener("click", runitem);
-document.getElementById("mail").addEventListener("click", runitem);
-document.getElementById("insta").addEventListener("click", runitem);
-document.getElementById("twitch").addEventListener("click", runitem);
-document.getElementById("google").addEventListener("click", runitem);
-document.getElementById("github").addEventListener("click", runitem);
-document.getElementById("dropbox").addEventListener("click", runitem);
-document.getElementById("deviantart").addEventListener("click", runitem);
-document.getElementById("ebay").addEventListener("click", runitem);
-document.getElementById("etsy").addEventListener("click", runitem);
-document.getElementById("amazon").addEventListener("click", runitem);
-document.getElementById("patreon").addEventListener("click", runitem);
-document.getElementById("nintendo").addEventListener("click", runitem);
+for (var i = 0; i < document.getElementsByClassName("optionItems").length; i++) {
+  document.getElementsByClassName("optionItems")[i].addEventListener("click", runitem);
+}
 
 document.getElementById("sdial1p").addEventListener("click", setselected);
 document.getElementById("sdial2p").addEventListener("click", setselected);
