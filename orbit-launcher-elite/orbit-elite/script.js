@@ -1,6 +1,4 @@
 //Activates First Run
-
-
 function onInstall() {
   firstRun();
   console.log("Extension Installed");
@@ -29,7 +27,6 @@ if (currVersion != prevVersion) {
 }
 
 //show Time
-
 function showTime() {
   var date = new Date();
   var h = date.getHours();

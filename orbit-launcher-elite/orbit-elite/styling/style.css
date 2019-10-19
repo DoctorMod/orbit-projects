@@ -50,6 +50,11 @@ body, html {
   background-color: #1565c0;
 }
 
+.inputLabel {
+  position: relative;
+  top: -10px;
+}
+
 a {
   text-decoration: none;
   font-size: 2vw;
