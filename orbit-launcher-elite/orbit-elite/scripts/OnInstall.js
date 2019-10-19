@@ -66,5 +66,12 @@ function firstRun() {
     localStorage.searchToggle = "true";
     localStorage.clockToggle = "true";
     localStorage.dialToggle = "true";
+  } else if (localStorage.version < 173) {
+      modalOpen("Update 1.7.3 of Orbit Newtab, Welcome to the latest version of Orbit Newtab. It is now been patched up from its broken state. We have now decided to create a new project called Everest. Visit our discord for more information!", true);
+    localStorage.version = 173;
+    localStorage.sub = "None";
+    localStorage.searchToggle = "true";
+    localStorage.clockToggle = "true";
+    localStorage.dialToggle = "true";
   }
 }
