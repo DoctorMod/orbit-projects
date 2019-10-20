@@ -17,7 +17,7 @@ New Tab page that gives you visually appealing and functional environment. Elimi
 
 ![Load Extension](https://developer.chrome.com/static/images/get_started/load_extension.png)
 
-Ta-da! The extension has been successfully installed. Because no icons were included in the manifest, a generic toolbar icon will be created for the extension.
+Ta-da! The extension has been successfully installed.
 
 ## Features
 
