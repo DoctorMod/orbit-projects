@@ -50,11 +50,6 @@ body, html {
   background-color: #1565c0;
 }
 
-.inputLabel {
-  position: relative;
-  top: -10px;
-}
-
 a {
   text-decoration: none;
   font-size: 2vw;
@@ -962,14 +957,15 @@ input:checked[type="radio"] + .sdBTN{
 #reset {
   box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
   border-radius: 100%;
-  width: 35px !important;
+  width: 50px !important;
   position: static;
-  height: 35px !important;
-  font-size: 15px;
+  height: 50px !important;
+  font-size: 20px;
 }
 
 #iReset {
-  position: static;
+  position: relative;
+  right: 6px;
   width: 0px;
   height: 0px;
   font-size: 15px !important;
@@ -1045,11 +1041,6 @@ input:checked[type="radio"] + .sdBTN{
   width: 33.33%;
 }
 
-.column2 {
-  float: left;
-  width: 50%;
-}
-
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -1058,8 +1049,7 @@ input:checked[type="radio"] + .sdBTN{
 }
 
 .SettingsSelection {
-  border-radius: 5px;
-  padding: 5px;
+  border-radius: 2px;
 }
 
 .mediaHide {
@@ -1110,16 +1100,6 @@ input:checked[type="radio"] + .sdBTN{
 
   span, label:not(.noTop) {
     font-size: 9.5px;
-  }
-
-  .widgets .column {
-    float: none;
-    text-align: center;
-    width: auto;
-  }
-
-  .widgets {
-    text-align: center;
   }
 }
 
