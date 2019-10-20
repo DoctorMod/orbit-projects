@@ -73,5 +73,67 @@ function firstRun() {
     localStorage.searchToggle = "true";
     localStorage.clockToggle = "true";
     localStorage.dialToggle = "true";
+  } else if (localStorage.version < 174) {
+    chrome.storage.sync.set({
+      dial1: "google"
+    }, function() {});
+    chrome.storage.sync.set({
+      dial2: "youtube"
+    }, function() {});
+    chrome.storage.sync.set({
+      dial3: "snapchat-ghost"
+    }, function() {});
+    chrome.storage.sync.set({
+      dial4: "instagram"
+    }, function() {});
+    chrome.storage.sync.set({
+      dial5: "mail"
+    }, function() {});
+    chrome.storage.sync.set({
+      dial6: "github-alt"
+    }, function() {});
+    chrome.storage.sync.set({
+      dial7: "discord"
+    }, function() {});
+    chrome.storage.sync.set({
+      dial8: "reddit-alien"
+    }, function() {});
+    chrome.storage.sync.set({
+      dial9: "nintendo-switch"
+    }, function() {});
+    chrome.storage.sync.set({
+      dial10: "twitter"
+    }, function() {});
+    chrome.storage.sync.set({
+      dialalt1: "https://google.com"
+    }, function() {});
+    chrome.storage.sync.set({
+      dialalt2: "https://youtube.com"
+    }, function() {});
+    chrome.storage.sync.set({
+      dialalt3: "https://www.snapchat.com"
+    }, function() {});
+    chrome.storage.sync.set({
+      dialalt4: "https://instagram.com"
+    }, function() {});
+    chrome.storage.sync.set({
+      dialalt5: "https://gmail.com"
+    }, function() {});
+    chrome.storage.sync.set({
+      dialalt6: "https://github.com"
+    }, function() {});
+    chrome.storage.sync.set({
+      dialalt7: "https://discordapp.com/channels/@me"
+    }, function() {});
+    chrome.storage.sync.set({
+      dialalt8: "https://reddit.com"
+    }, function() {});
+    chrome.storage.sync.set({
+      dialalt9: "https://my.nintendo.com"
+    }, function() {});
+    chrome.storage.sync.set({
+      dialalt10: "https://twitter.com"
+    }, function() {});
+    localStorage.version = 174;
   }
 }
