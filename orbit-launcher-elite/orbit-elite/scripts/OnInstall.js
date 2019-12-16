@@ -28,7 +28,6 @@ if (currVersion != prevVersion) {
   localStorage.updateVersion = currVersion;
 }
 
-
 //Updates & install
 function firstRun() {
   chrome.runtime.setUninstallURL("https://orbitelite.github.io/uninstall.html");
